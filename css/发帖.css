@@ -1,0 +1,549 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0px;
+	margin:0px;
+}
+#header{
+	width:1495px;
+	height:75px;
+	border-bottom:2px solid #671a06;
+	font-family:"黑体";
+	font-size:15px;
+	text-align:center;
+	background:black;
+	color:#CCC;
+	overflow:hidden;
+}/*头部*/
+#header a, #header  a:hover, #header a:visited{
+	color:#fff;
+	text-decoration:none;
+}
+.animatedSearch{
+	width: 30px;
+	height: 30px;
+	margin:0px;
+	padding:0 5px;
+	float: left;
+	border-radius: 44px;
+	font-size: 1.2em;
+	background: url(../images/serach.png) no-repeat 50%;
+	color: #fff;
+	transition: width 0.4s ease-in-out;
+	cursor:pointer;
+	float:right;
+}
+.animatedSearch:focus{
+	width: 60%;
+	background: #666 url(../images/serach.png)no-repeat 95% 50%;
+	padding:0px 5px 0px 15px;
+	outline:none;
+	cursor:default;
+}/*搜索*/
+.banner{
+	position:relative;
+	top:0px;
+	left:0px;
+	border:0px;
+	width:1495px;
+	height:auto;
+	overflow:hidden;
+	box-shadow:0 2px 2px #CCCCCC;
+}
+.nav{
+	position: absolute;
+	left: 159px;
+	top: 0px;
+	overflow: hidden;
+	z-index: 9;
+}
+.nav_1{
+	float:left;
+	width: 100px;
+	height: 160px;
+	padding-right:10px;
+	text-align: center;
+	font-size:10px;
+	line-height: 25px;
+	font-family: "黑体";
+	color:#CCC;
+	background:linear-gradient(rgba(43,43,43,0.7), rgba(43,43,43,0));
+}
+.nav_2{
+	float:left;
+	width: 100px;
+	height: 160px;
+	padding-right:10px;
+	text-align: center;
+	font-size:10px;
+	line-height: 25px;
+	font-family: "黑体";
+	color:#CCC;
+	background:linear-gradient(rgba(43,43,43,0.7), rgba(43,43,43,0))
+}
+.nav_3{
+	float:left;
+	width: 100px;
+	height: 160px;
+	padding-right:10px;
+	text-align: center;
+	font-size:10px;
+	line-height: 25px;
+	font-family: "黑体";
+	color:#ccc;
+	background:linear-gradient(rgba(43,43,43,0.7), rgba(43,43,43,0));
+}
+.nav_1 p:hover{
+	color:white;
+	cursor:pointer;
+}
+.nav_2 p:hover{
+	color:white;
+	cursor:pointer;
+}
+.nav_3 p:hover{
+	color:white;
+	cursor:pointer;
+}
+.nav_1:hover{
+	background:linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.nav_2:hover{
+	background:linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.nav_3:hover{
+	background:linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+}/*三个导航栏*/
+.station{
+	position:relative;
+	left:180px;
+	top:20px;
+	height:30px;
+	width:500px;
+	text-align:left;
+	font-family:"微软雅黑";
+	font-size:15px;
+	line-height:25px;
+	color:black;
+}
+.station a{
+	color:black;
+	text-decoration:none;
+}
+.station a:hover{
+	color:#666;
+	text-decoration:underline;
+}
+.F_nav{
+	position:relative;
+	left:180px;
+	top:40px;
+	width:500px;
+	line-height:30px;
+	text-align:center;
+	font-family:"微软雅黑";
+	color:black;
+}
+.F_nav td{
+	border-spacing:20px;
+}
+.F_nav td:hover{
+	cursor:pointer;
+	background:#B90000;
+	color:white;
+}
+.left{
+	position:relative;
+	left:180px;
+	top:60px;
+	padding:30px 0px;
+	width:200px;
+	height:600px;ccolor:white;
+	font-size:15px;
+	font-family:"微软雅黑";
+	text-align:center;
+	color:#999;
+	background:#333;
+}
+.onload a{
+	color:#F30;
+	text-decoration:none;
+}
+.onload a:hover{
+	color:#F30;
+	text-decoration:underline;
+}	
+@font-face {
+  font-family: 'iconfont1';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_wo3gqcscnsm.eot');
+  src: url('//at.alicdn.com/t/font_628978_wo3gqcscnsm.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_wo3gqcscnsm.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_wo3gqcscnsm.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_wo3gqcscnsm.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont2';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_7ayvcndudgv.eot');
+  src: url('//at.alicdn.com/t/font_628978_7ayvcndudgv.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_7ayvcndudgv.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_7ayvcndudgv.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_7ayvcndudgv.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont3';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_7n7bpktl8rc.eot');
+  src: url('//at.alicdn.com/t/font_628978_7n7bpktl8rc.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_7n7bpktl8rc.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_7n7bpktl8rc.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_7n7bpktl8rc.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont4';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_z8x0tlzrnmk.eot');
+  src: url('//at.alicdn.com/t/font_628978_z8x0tlzrnmk.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_z8x0tlzrnmk.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_z8x0tlzrnmk.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_z8x0tlzrnmk.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont5';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_s7qcq18w1n.eot');
+  src: url('//at.alicdn.com/t/font_628978_s7qcq18w1n.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_s7qcq18w1n.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_s7qcq18w1n.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_s7qcq18w1n.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont6';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_e7uxw09t33b.eot');
+  src: url('//at.alicdn.com/t/font_628978_e7uxw09t33b.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_e7uxw09t33b.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_e7uxw09t33b.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_e7uxw09t33b.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont7';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_wzqeum452g.eot');
+  src: url('//at.alicdn.com/t/font_628978_wzqeum452g.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_wzqeum452g.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_wzqeum452g.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_wzqeum452g.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont8';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_nmb5oswtq2b.eot');
+  src: url('//at.alicdn.com/t/font_628978_nmb5oswtq2b.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_nmb5oswtq2b.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_nmb5oswtq2b.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_nmb5oswtq2b.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont9';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_um0f9eal4w.eot');
+  src: url('//at.alicdn.com/t/font_628978_um0f9eal4w.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_um0f9eal4w.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_um0f9eal4w.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_um0f9eal4w.svg#iconfont') format('svg');
+}
+.myiconfont1 {
+	margin-top:30px;
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont1" !important; //名字一致
+	font-size:50px;
+	font-style:normal;
+	letter-spacing:30px;
+	color:#999;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont1:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.myiconfont2 {
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont2" !important; //名字一致
+	font-size:50px;
+	letter-spacing:30px;
+	font-style:normal;
+	color:#999;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont2:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.myiconfont3 {
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont3" !important; //名字一致
+	font-size:50px;
+	letter-spacing:30px;
+	font-style:normal;
+	color:#999;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont3:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.myiconfont4{
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont4" !important; //名字一致
+	font-size:50px;
+	letter-spacing:30px;
+	font-style:normal;
+	color:#999;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont4:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.myiconfont5{
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont5" !important; //名字一致
+	font-size:50px;
+	letter-spacing:30px;
+	font-style:normal;
+	color:white;
+	background:#FF8000;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont5:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.myiconfont6{
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont6" !important; //名字一致
+	font-size:50px;
+	font-style:normal;
+	letter-spacing:30px;
+	color:#999;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont8{
+	font-family:"iconfont8" !important; //名字一致
+	font-size:50px;
+	font-style:normal;
+	color:#999;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont9{
+	font-family:"iconfont9" !important; //名字一致
+	font-size:30px;
+	font-style:normal;
+	color:#999;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont8:hover{
+	color:#FF8000;
+	cursor:pointer;
+	text-decoration:underline;
+}
+.myiconfont9:hover{
+	color:#FF8000;
+	cursor:pointer;
+	text-decoration:underline;
+}
+.myiconfont6:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.content{
+	position:absolute;
+	left:380px;
+	top:478px;
+	width:900px;
+	height:1000px;
+	margin-left:50px;
+}
+.content2{
+	margin-top:20px;
+	width:898px;
+	border:1px solid #EEE;
+}
+.content3{
+	margin-top:20px;
+	width:898px;
+	border:1px solid #EEE;
+}
+.content_1{
+	padding:0px;
+	margin:0px;
+	height:200px;
+	border:1px solid #EEE;
+	font-family:"微软雅黑";
+}
+.content_1_1{
+	padding-left:20px;
+	height:30px;
+	width:878px;
+	font-family:"黑体";
+	font-size:20px;
+	line-height:30px;
+	text-align:left;
+	color:#F3781D;
+	background:#FAFAFA;
+}
+.content_1_2{
+	margin-left:300px;
+	margin-top:20px;
+	width:250px;
+	height:70px;
+	line-height:70px;
+	text-align:center;
+	font-size:30px;
+	border:1px solid #F33;
+	border-radius:10px;
+	background:#AE2D43;
+	color:white;
+	cursor:pointer;
+}
+.content_1_2:hover{
+	background:#C0526D
+}
+.content_1_2_1{
+	margin-left:220px;
+	margin-top:0px;
+	width:420px;
+	height:20px;
+	line-height:30px;
+	font-size:15px;
+	text-decoration:underline;
+	cursor:pointer;
+}
+.content_2{
+	margin-top:20px;
+	padding:0px;
+	height:320px;
+	width:275px;
+	border:1px solid #EEE;
+	font-family:"微软雅黑";
+	box-shadow:0px 0px 5px #333;
+}
+.content_2_1{
+	padding:10px;
+	width:255px;
+	height:260px;
+}
+.content_2_1_1{
+	padding:10px 0px;
+	margin-left:5px;
+	margin-right:5px;
+	width:245px;
+	border-bottom:1px solid #999;
+}
+.content_2_1_2{
+	padding:10px 0px;
+	margin-left:5px;
+	margin-right:5px;
+	width:245px;
+}
+.past_c{
+	padding:0px;
+	margin:0px;
+	height:270px;
+	width:898px;
+	display:block;
+}
+.rev_c{
+	padding:0px;
+	margin:0px;
+	height:270px;
+	width:898px;
+	display:block;
+}
+.hf_1{
+	font-size:15px;
+	line-height:30px;
+	font-family:"微软雅黑";
+	color:#999;
+}
+.hf_1:hover{
+	text-decoration:underline;
+	color:#FF8000;
+	cursor:pointer;
+}
+.hf_2{
+	font-size:15px;
+	line-height:30px;
+	font-family:"微软雅黑";
+	color:#999;
+}
+.hf_2:hover{
+	text-decoration:underline;
+	color:#FF8000;
+	cursor:pointer;
+}
+.footer{
+	position:absolute;
+	left:0px;
+	top:1400px;
+	width:1495px;
+	height:200px;
+	margin-top:10px;
+	padding-left:0px;
+	background:#333;
+	font-family:"微软雅黑";
+	font-size:12px;
+	color:#666;
+	line-height:25px;
+	box-shadow:0px 0px 5px #333;
+}
+.foot{
+	padding-left:300px;
+	padding-top:20px;
+	margin:0px;
+	border:0px;
+	width:1100px;
+	height:180px;
+}
+.foot1{
+	width:200px;
+	height:180px;
+}
+.foot2{
+	width:700px;
+	height:180px;
+}
+.foot2 ul:hover{
+	text-decoration:underline;
+}
+a{
+	color:#666;
+	text-decoration:none;
+}
+a:hover{
+	color:#FFF;
+	text-decoration:underline;
+}
+a:visited{
+	color:#666;
+	text-decoration:none;
+}

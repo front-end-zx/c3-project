@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+body, .wrapper, .header, ._txt, ._btn, .nav_first, .nav_left, .contain, .idea, p, form, input, a, ul, li{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background-color:#fdfcf8;
+}
+.wrapper{
+	width:1210px;
+	margin:0 auto;
+}
+.header{
+	height:100px;
+	padding:0px 20px;
+	font-family:"microsoft yahei";
+	line-height:100px;
+	border:1px solid #eee;
+}
+.header p{
+	height:80px;
+	float:left;
+	font-size:30px;
+	letter-spacing:2px;
+	color:#ae4141;
+}
+.header p a, .header p a:hover, .header p a:visited{
+	color:#ae4141;
+	text-decoration:none;
+}
+.header p:hover{
+	border-bottom:5px solid #ae4141;
+}
+.header form{
+	float:right;
+	margin-top:35px;
+	font-size:12px;
+}
+.header form  ._txt{
+	width:238px;
+	height:28px;
+	border:1px solid #eee;
+}
+.header form ._btn{
+	border:0;
+	margin-left:10px;
+	width:30px;
+	height:30px;
+	background-color:#ae4141;
+	color:#fff;
+}
+.nav_first{
+	width:1210px;
+	height:48px;
+	font-family:"microsoft yahei";
+	font-size:14px;
+	background-color:#e8e7e3;
+}
+.nav_first ul li{
+	float:left;
+	list-style:none;
+}
+.nav_first ul li a{
+	display:inline-block;
+	width:200px;
+	text-align:center;
+	line-height:48px;
+	text-decoration:none;
+	color:#999;
+}
+.nav_first ul li a:hover{
+	color:#fff;
+	background:#444;
+}
+.nav_first ul .H{
+	color:#fff;
+	background:#444;
+}
+.nav{
+	width:1210px;
+	border-bottom:1px solid #eee;
+}
+.nav_left{
+	float:left;
+	width:199px;
+	border:1px solid #eee;
+	border-bottom:0;
+	background:transparent;
+}
+.nav_left h2{
+	padding-left:10px;
+	font-size:18px;
+}
+.nav_left ul{
+	font-family:"microsoft yahei";
+	font-size:12px;
+	list-style:none;
+}
+.nav_left ul li a{
+	display:inline-block;
+	width:199px;
+	text-align:left;
+	text-indent:1.8em;
+	line-height:32px;
+	color:#000;
+	text-decoration:none;
+}
+.nav_left ul li a:hover{
+	color:#fff;
+	background:#999;
+}
+.contain{
+	float:left;
+	width:830px;
+	background:transparent;
+	font-family:"microsoft yahei";
+}
+.contain .idea{
+	margin:15px;
+	text-align:center;
+	border-bottom:1px solid #999;
+}
+.contain .idea p{
+	line-height:25px;
+}
+#d2{
+	padding-bottom:15px;
+	padding-left:150px;
+	text-align: left;
+	background:url(../images/icon2.png) 0 0 no-repeat;
+}
+#d3{
+	padding-bottom:15px;
+	padding-left:150px;
+	text-align: left;
+	background:url(../images/icon3.png) 0 0 no-repeat;
+}
+#d4{
+	padding-bottom:15px;
+	padding-left:150px;
+	text-align: left;
+	background:url(../images/icon4.png) 0 0 no-repeat;
+}
+#d5{
+	padding-bottom:15px;
+	padding-left:150px;
+	text-align: left;
+	background:url(../images/icon5.png) 0 0 no-repeat;
+}
+#d6{
+	height:100px;
+	padding-bottom:15px;
+	padding-left:150px;
+	text-align: left;
+	background:url(../images/icon6.png) 0 0 no-repeat;
+}
+#d7{
+	height:100px;
+	padding-bottom:15px;
+	padding-left:150px;
+	text-align: left;
+	background:url(../images/icon7.png) 0 0 no-repeat;
+}
+#d8{
+	padding-bottom:15px;
+	padding-left:150px;
+	text-align: left;
+	border-bottom:0;
+}
+#d5 a, #d6 a, #d7 a, #d8 a{
+	display:inline-block;
+	color:#ae4141;
+	border-bottom:1px solid #ae4141;
+	text-decoration:none;
+}
+#d5 a:hover, #d6 a:hover, #d7 a:hover, d8 a:hover{
+	color:#F00;
+	border-bottom: 1px solid #F00;
+	text-decoration:none;
+}
+.nav_right{
+	float:left;
+	width:177px;
+	border:1px solid #eee;
+	border-bottom:0;
+	background:transparent;
+}
+.nav_right h2{
+	padding-left:10px;
+	font-size:18px;
+}
+.nav_right ul{
+	font-family:"microsoft yahei";
+	font-size:12px;
+	list-style:none;
+}
+.nav_right ul li a{
+	display:inline-block;
+	width:160px;
+	text-align:left;
+	text-indent:1em;
+	line-height:32px;
+	color:#ae4141;
+	text-decoration:none;
+}
+.nav_right ul li a:hover{
+	color:#fff;
+	background:#F00;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	line-height:0;
+	visibility:hidden;
+	clear:both;
+}
+.clearfix{
+	zoom:1;/*兼容IE*/
+}
+.footer{
+	width:1210px;
+	height:60px;
+	font-family:"microsoft yahei";
+	font-size:12px;
+	line-height:60px;
+	text-align:center;
+	background:#aaa;
+	color:#333;
+}
+@font-face {
+  font-family: 'iconfont_aten';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_qo3xfqczcif.eot');
+  src: url('//at.alicdn.com/t/font_628978_qo3xfqczcif.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_qo3xfqczcif.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_qo3xfqczcif.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_qo3xfqczcif.svg#iconfont') format('svg');
+}
+.aten{
+    font-family:"iconfont_aten" !important;
+    font-size:12px;
+	font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.copyright{
+	margin-top:20px;
+	width:1210px;
+	height:70px;
+	margin:0 auton;
+	text-align:center;
+	font-family:"microsoft yahei";
+	font-size:12px;
+	font-weight:300;
+	line-height:30px;
+	color:#999;
+}

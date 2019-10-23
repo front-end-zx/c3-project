@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>html5画布</title>
+<link rel="shortcut icon" href="../icon_font/logo.ico">
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script language="javascript">
+$(function(){
+	$(".title").hover(function(){
+		$(this).css("border-bottom","5px solid #ae4141");
+	},function(){
+		$(this).css("border-bottom","none");
+	});
+})
+</script>
+<script language="javascript">
+$(function(){
+	$("table tr:nth-child(2n+1)").css("background","#eee");
+	$("table tr td:first-child").css("width","280px");
+	$("table tr:first-child").css({"background":"#3F3F3F","color":"#fff","height":"35px"});
+})
+</script>
+<script type="text/javascript">
+         window.onscroll= function(){
+                //变量t是滚动条滚动时，距离顶部的距离
+                var t = document.documentElement.scrollTop||document.body.scrollTop;
+                var scrollup = document.getElementById('scrollup');
+                //当滚动到距离顶部200px时，返回顶部的锚点显示
+                if(t>=200){
+                    scrollup.style.display="block";
+                }else{          //恢复正常
+                    scrollup.style.display="none";
+                }
+            }
+</script>
+
+<style type="text/css">
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: rgb(253,252,248);
+}
+.header{
+	margin: 0 auto;
+	width: 1380px;
+	height: 100px;
+	font-family:"microsoft yahei";
+	text-align:center;
+	border:1px solid #eee;
+}
+.header .title{
+	margin-left:20px;
+	width:260px;
+	height:90px;
+	font-size:37px;
+	color:#ae4141;
+}
+.header .title a{
+	line-height:90px;
+	color:#ae4141;
+	text-decoration:none;
+}
+.header .title a:hover{
+	text-decoration: none;
+}
+.nav{
+	margin:0 auto;
+	width:1380px;
+	height:50px;
+}
+.nav ul{
+	margin:0px;
+	padding:0px;
+}
+.nav ul li{
+	list-style:none;
+}
+.nav ul li a{
+	display:inline-block;
+	float:left;
+	border:0px;
+	width:230px;
+	height:50px;
+	font-family:"microsoft yahei";
+	font-size:15px;
+	background:#eee;
+	color:#999;
+	text-align:center;
+	line-height:50px;
+	text-decoration:none;
+}
+.nav ul li a:hover{
+	text-decoration:none;
+	color:#fff;
+	background:#333;
+}
+.nav ul li #nav_H5{
+	color:#fff;
+	background:#333;
+}
+.content{
+	margin-top:20px;
+	margin:0 auto;
+	width:1380px;
+	height:3455px;
+}
+.left{
+	float:left;
+	width:228px;
+	height:3455px;
+	font-family:"microsoft yahei";
+	border:1px solid #eee;
+}
+.left_top{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.left_list1{
+	border-bottom:1px solid #eee;
+}
+.left_list1 h3{
+	margin-left:20px;
+}
+.left_list1 ul{
+	padding:0px;
+	margin:0px;
+}	
+.left_list1 ul li{
+	list-style:none;
+}
+.left_list1 ul li a{
+	width:178px;
+	display:inline-block;
+	padding-left:50px;
+	line-height:30px;
+	font-size:14px;
+	color:#666;
+	text-decoration:none;
+}
+.left_list1 ul li a:hover{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list1 #list1_H5{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list2 h3{
+	margin-left:15px;
+}
+.left_list2 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list2 ul li{
+	list-style:none;
+}
+.left_list2 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	font-size:13px;
+	line-height:30px;
+	color:#777;
+	text-decoration:none;
+}
+.left_list2 ul li a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.left_list3 h3{
+	margin-left:15px;
+}
+.left_list3{
+	border-top:1px solid #eee;
+}
+.left_list3 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list3 ul li{
+	list-style:none;
+}
+.left_list3 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	line-height:30px;
+	font-size:13px;
+	color:#000;
+	text-decoration:none;
+}
+.left_list3 ul li a:hover{
+	color:#fff;
+	background:#999;
+	text-decoration:none;
+}
+.left_list3 p{
+	font-weight:700;
+	text-align:center;
+	line-height:30px;
+	font-size:14px;
+	color:#0479A7;
+}
+.left_list3 p a{
+	color:#0479A7;
+	text-decoration:none;
+}
+.middle{
+	float:left;
+	padding-left:30px;
+	font-size:14px;
+	font-family:"microsoft yahei";
+	width:890px;
+	height:auto;
+}
+.title_idx p{
+	padding-left:0px;
+	line-height:25px;
+}
+.middle p span{
+	color:#00C;
+	font-weight:700;
+}
+.middle_title span a{
+	display:inline-block;
+	margin-right:25px;
+	height:30px;
+	width:100px;
+	text-align:center;
+	line-height:30px;
+	font-size:13px;
+	font-family:"microsoft yahei";
+	color:#444;
+	background:#eee;
+	border:1px solid #ddd;
+	text-decoration:none;
+}
+.middle_title span a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.middle table{
+	width:890px;
+	border:1px solid #eee;
+	border-collapse:collapse;
+}
+.middle table tr{
+	height:30px;
+	font-size:14px;
+	line-height:30px;
+	text-indent:1em;
+}
+.middle table a{
+	color:#ae4141;
+	text-decoration:underline;
+}
+.middle table tr td{
+	border:1px solid #999;
+}
+.arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.right{
+	float:right;
+	margin-left:30px;
+	width:198px;
+	height:3455px;
+	border:1px solid #eee;
+}
+.right_tools{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.tools_list{
+	width:175px;
+	height:auto;
+	margin:0 auto;
+}
+.right_tools p{
+	margin:0px;
+	padding:0px;
+}
+.tools_1{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	margin-top:20px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #093 , #063); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #093, #063); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #093, #063); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #093 , #063); /* 标准的语法 */
+}
+.tools_2{
+	margin: auto;
+	width:175px;
+	height:100px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #3cc , #39c); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #3cc, #39c); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #3cc, #39c); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #3cc , #39c); /* 标准的语法 */
+}
+.tools_3{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #939 , #909); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #939, #909); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #939, #909); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #939, #909); /* 标准的语法 */
+}
+.right_link{
+	margin-top:20px;
+	text-align:center;
+}
+.right_link p{
+	margin:0px;
+	padding:0px;
+	width:198px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	font-weight:700;
+	background:#eee;
+}
+.line{
+	width:1380px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.footer{
+	margin:0 auto;
+	width:1380px;
+	height:60px;
+	line-height:60px;
+	font-size:14px;
+	text-align:center;
+	background:#eee;
+	color:#000;
+}
+.copyright{
+	margin:0 auto;
+	height:60px;
+	margin-top:20px;
+	text-align:center;
+	font-size:12px;
+	color:#999;
+}
+#scrollup{
+    position:fixed;
+    bottom:65px;
+    right:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    display: none;
+    font-size:40px;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    background: #777;
+    z-index:99;
+    opacity:0.8;
+}
+#scrollup:hover{
+    opacity:0.7;
+}
+.clearfix{
+	zoom:1;/*兼容IE*/
+}
+.clearfix:before{
+	display:inline-block;
+	content:"";
+	height:0px;
+	line-height:0px;
+	visibility:hidden;
+	clear:both;
+}
+</style>
+
+</head>
+
+<body>
+<div class="header">
+	<div class="title"><a href="../首页.html">玩转JavaScript</a></div>
+</div>
+<div class="nav">
+	<ul>
+		<li><a href="html标签.html" id="nav_H5">HTML5</a></li>
+		<li><a href="css3简介.html">CSS3</a></li>
+		<li><a href="JavaScript简介.html">JavaScript</a></li>
+		<li><a href="jquery简介.html">jQuery</a></li>
+		<li><a href="Web service.html">Web Services</a></li>
+		<li><a href="Web Building.html">Web Building</a></li>
+	</ul>
+</div>
+<div class="content clearfix">
+	<div class="left">
+		<div class="left_top">课程表</div>
+		<div class="left_list1">
+			<h3>参考手册</h3>
+			<ul>
+				<li><a href="html标签.html">HTML5标签</a></li>
+				<li><a href="html5属性.html">HTML5属性</a></li>
+				<li><a href="html事件.html">HTML5事件</a></li>
+				<li><a href="html5表单.html">HTML5表单</a></li>
+				<li><a href="html5视频音频.html">HTML5视频/音频</a></li>
+				<li><a href="#"  id="list1_H5">HTML5画布</a></li>
+			</ul>
+		</div>
+		<div class="left_list2">
+			<h3>HTML5画布</h3>
+			<ul>
+				<li><a href="#">颜色、样式和阴影</a></li>
+				<li><a href="#">线条样式</a></li>
+				<li><a href="#">路径</a></li>
+				<li><a href="#">转换</a></li>
+				<li><a href="#">文本</a></li>
+				<li><a href="#">图像绘制</a></li>
+				<li><a href="#">像素操作</a></li>
+				<li><a href="#">合成</a></li>
+				<li><a href="#">其他</a></li>
+			</ul>
+		</div>
+		<div class="left_list3">
+			<h3>建站手册</h3>
+			<ul>
+				<li><a href="#">网站构建</a></li>
+				<li><a href="#">万维网联盟(W3C)</a></li>
+				<li><a href="#">浏览器信息</a></li>
+				<li><a href="#">网站品质</a></li>
+				<li><a href="#">语义网</a></li>
+				<li><a href="#">网站主机</a></li>
+			</ul>
+			<p><a href="#">关于玩转JavaScript</a></p>
+			<p><a href="#">帮助JavaScript</a></p>
+		</div>
+	</div>
+	<div class="middle">
+		<div class="middle_title">
+			<h1>HTML 5 Canvas 参考手册</h1>
+			<span><a href="html5视频音频.html">&lt;上一节</a></span><span><a href="#">下一节&gt;</a></span><br><br>
+			<hr></hr>
+		</div>
+		<div class="middle_desc">
+			<h3>描述</h3>
+			<p>HTML5 &lt;canvas&gt; 标签用于绘制图像（通过脚本，通常是 JavaScript）。</p>
+			<p>不过，&lt;canvas&gt;元素本身并没有绘制能力（它仅仅是图形的容器） - 您必须使用脚本来完成实际的绘图任务。</p>
+			<p>getContext() 方法可返回一个对象，该对象提供了用于在画布上绘图的方法和属性。</p>
+			<p>本手册提供完整的 getContext("2d") 对象属性和方法，可用于在画布上绘制文本、线条、矩形、圆形等等。</p>
+			<hr></hr>
+		</div>
+		<div class="support">
+			<h3>浏览器支持</h3>
+			<p>Internet Explorer 9、Firefox、Opera、Chrome 以及 Safari 支持&lt;canvas&gt;及其属性和方法。</p>
+			<p><b>注释：</b>Internet Explorer 8 以及更早的版本不支持&lt;canvas&gt;元素。</p>
+			<br>
+			<hr></hr>
+			<br>
+		</div>
+		 <h2>颜色、样式和阴影</h2>
+		<table id="tb_method">
+			<tr>
+				<th>属性</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">fillStyle</a></td><td>设置或返回用于填充绘画的颜色、渐变或模式</td>
+			</tr>
+			<tr>
+				<td><a href="#">strokeStyle</a></td><td>设置或返回用于笔触的颜色、渐变或模式</td>
+			</tr>
+			<tr>
+				<td><a href="#">shadowColor</a></td><td>	设置或返回用于阴影的颜色</td>
+			</tr>
+			<tr>
+				<td><a href="#">shadowBlur</a></td><td>设置或返回用于阴影的模糊级别</td>
+			</tr>
+			<tr>
+				<td><a href="#">shadowOffsetX</a></td><td>设置或返回阴影距形状的水平距离</td>
+			</tr>
+			<tr>
+				<td><a href="#">shadowOffsetY</a></td><td>设置或返回阴影距形状的垂直距离</td>
+			</tr>
+		</table>
+		<br>
+		<table id="tb_add">
+			<tr>
+				<th>方法</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">createLinearGradient()</a></td><td>创建线性渐变（用在画布内容上）</td>
+			</tr>
+			<tr>
+				<td><a href="#">createPattern()</a></td><td>在指定的方向上重复指定的元素</td>
+			</tr>
+			<tr>
+				<td><a href="#">createRadialGradient()</a></td><td>创建放射状/环形的渐变（用在画布内容上）</td>
+			</tr>
+			<tr>
+				<td><a href="#">addColorStop()</a></td><td>规定渐变对象中的颜色和停止位置</td>
+			</tr>
+		</table>
+		<br><hr></hr>
+		<h2>线条样式</h2>
+		<table id="tb_attr">
+			<tr>
+				<th>属性</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">lineCap</a></td><td>设置或返回线条的结束端点样式</td>
+			</tr>
+			<tr>
+				<td><a href="#">lineJoin</a></td><td>设置或返回两条线相交时，所创建的拐角类型</td>
+			</tr>
+			<tr>
+				<td><a href="#">lineWidth</a></td><td>设置或返回当前的线条宽度</td>
+			</tr>
+			<tr>
+				<td><a href="#">miterLimit</a></td><td>设置或返回最大斜接长度</td>
+			</tr>
+		</table>
+		<br><hr></hr>
+		<table id="rect">
+			<tr>
+				<th>方法</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">rect()</a></td><td>创建矩形</td>
+			</tr>
+			<tr>
+				<td><a href="#">fillRect()</a></td><td>绘制“被填充”的矩形</td>
+			</tr>
+			<tr>
+				<td><a href="#">strokeRect()</a></td><td>绘制矩形（无填充）</td>
+			</tr>
+			<tr>
+				<td><a href="#">clearRect()</a></td><td>在给定的矩形内清除指定的像素</td>
+			</tr>
+		</table>
+		<br><hr></hr>
+		<h2>路径</h2>
+		<table id="line">
+			<tr>
+				<th>方法</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">fill()</a></td><td>填充当前绘图（路径）</td>
+			</tr>
+			<tr>
+				<td><a href="#">stroke()</a></td><td>绘制已定义的路径</td>
+			</tr>
+			<tr>
+				<td><a href="#">beginPath()</a></td><td>起始一条路径，或重置当前路径</td>
+			</tr>
+			<tr>
+				<td><a href="#">moveTo()</a></td><td>把路径移动到画布中的指定点，不创建线条</td>
+			</tr>
+			<tr>
+				<td><a href="#">closePath()</a></td><td>创建从当前点回到起始点的路径</td>
+			</tr>
+			<tr>
+				<td><a href="#">lineTo()</a></td><td>添加一个新点，然后在画布中创建从该点到最后指定点的线条</td>
+			</tr>
+			<tr>
+				<td><a href="#">clip()</a></td><td>从原始画布剪切任意形状和尺寸的区域</td>
+			</tr>
+			<tr>
+				<td><a href="#">quadraticCurveTo()</a></td><td>创建二次贝塞尔曲线</td>
+			</tr>
+			<tr>
+				<td><a href="#">bezierCurveTo()</a></td><td>创建三次方贝塞尔曲线</td>
+			</tr>
+			<tr>
+				<td><a href="#">arc()</a></td><td>创建弧/曲线（用于创建圆形或部分圆）</td>
+			</tr>
+			<tr>
+				<td><a href="#">arcTo()</a></td><td>创建两切线之间的弧/曲线</td>
+			</tr>
+			<tr>
+				<td><a href="#">isPointInPath()</a></td><td>如果指定的点位于当前路径中，则返回 true，否则返回 false</td>
+			</tr>
+		</table>
+		<br><hr></hr>
+		<h2>转换</h2>
+		<table id="trans">
+			<tr>
+				<th>方法</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">scale()</a></td><td>缩放当前绘图至更大或更小</td>
+			</tr>
+			<tr>
+				<td><a href="#">rotate()</a></td><td>旋转当前绘图</td>
+			</tr>
+			<tr>
+				<td><a href="#">translate()</a></td><td>重新映射画布上的 (0,0) 位置</td>
+			</tr>
+			<tr>
+				<td><a href="#">transform()</a></td><td>替换绘图的当前转换矩阵</td>
+			</tr>
+			<tr>
+				<td><a href="#">setTransform()</a></td><td>将当前转换重置为单位矩阵。然后运行 transform()</td>
+			</tr>
+		</table>
+		<br><hr></hr>
+		<h2>文本</h2>
+		<table id="text">
+			<tr>
+				<th>属性</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">fillText()</a></td><td>在画布上绘制“被填充的”文本</td>
+			</tr>
+			<tr>
+				<td><a href="#">strokeText()</a></td><td>在画布上绘制文本（无填充）</td>
+			</tr>
+			<tr>
+				<td><a href="#">measureText()	</a></td><td>返回包含指定文本宽度的对象</td>
+			</tr>
+		</table>
+		<br><hr></hr>
+		<h2>图像绘制</h2>
+		<table id="pain">
+			<tr>
+				<th>方法</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">drawImage()</a></td><td>向画布上绘制图像、画布或视频</td>
+			</tr>
+		</table>
+		<br><hr></hr>
+		<h2>像素操作</h2>
+		<table id="px">
+			<tr>
+				<th>属性</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">width</a></td><td>返回 ImageData 对象的宽度</td>
+			</tr>
+			<tr>
+				<td><a href="#">height</a></td><td>返回 ImageData 对象的高度</td>
+			</tr>
+			<tr>
+				<td><a href="#">data</a></td><td>返回一个对象，其包含指定的 ImageData 对象的图像数据</td>
+			</tr>
+		</table>
+		<br>
+		<br><hr></hr>
+		<h2>合成</h2>
+		<table id="compose">
+			<tr>
+				<th>属性</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">globalAlpha</a></td><td>设置或返回绘图的当前 alpha 或透明值</td>
+			</tr>
+			<tr>
+				<td><a href="#">globalCompositeOperation</a></td><td>设置或返回新图像如何绘制到已有的图像上</td>
+			</tr>
+		</table>
+		<br><hr></hr>
+		<h2>其他</h2>
+		<table id="tb_event">
+			<tr>
+				<th>方法</th><th>描述</th>
+			</tr>
+			<tr>
+				<td>save()</td><td>保存当前环境的状态</td>
+			</tr>
+			<tr>
+				<td>restore()</td><td>返回之前保存过的路径状态和属性</td>
+			</tr>
+			<tr>
+				<td>createEvent()</td><td>保存当前环境的状态</td>
+			</tr>
+			<tr>
+				<td>getContext()</td><td>保存当前环境的状态</td>
+			</tr>
+			<tr>
+				<td>toDataURL()</td><td></td>
+			</tr>
+		</table>
+	</div>
+	<div class="right">
+		<div class="right_tools"><p>工具箱</p></div>
+		<div class="tools_list">
+			<div class="tools_1"></div>
+			<div class="tools_2"></div>
+			<div class="tools_3"></div>
+		</div>
+		<div class="right_link">
+			<p>赞助商链接</p>
+			<div></div>
+		</div>
+	</div>
+</div>
+<div class="line"><hr></hr></div>
+<div class="footer">
+	<p>玩转JavaScript提供的内容仅供学习和参考，不保证内容的正确性。通过使用本网站随之而来的风险与本站无关。</p>
+</div>
+<div class="copyright">
+	<p>Copyright © 2016-2019 Play with javascript. All Rights Reserved.</p>
+	<p>玩转JavaScript 版权所有</p>
+</div>
+<a id="scrollup" href="#top"><span style="font-size:18px; line-height:50px;">顶</span></a>
+</body>
+</html>

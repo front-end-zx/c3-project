@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JavaScript变量</title>
+<link rel="shortcut icon" href="../icon_font/logo.ico">
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script language="javascript">
+$(function(){
+	$(".title").hover(function(){
+		$(this).css("border-bottom","5px solid #ae4141");
+	},function(){
+		$(this).css("border-bottom","none");
+	});
+})
+</script>
+<script language="javascript">
+$(function(){
+	$("#tb_sup tr:nth-child(2n+1)").css("background","#eee");
+	$("#tb_sup tr:first-child").css({"background":"#3F3F3F","color":"#fff","height":"35px"});
+	$("#tb_new tr:nth-child(2n+1)").css("background","#eee");
+	$("#tb_new tr:first-child").css({"background":"#3F3F3F","color":"#fff","height":"35px"});
+})
+</script>
+<script type="text/javascript">
+         window.onscroll= function(){
+                //变量t是滚动条滚动时，距离顶部的距离
+                var t = document.documentElement.scrollTop||document.body.scrollTop;
+                var scrollup = document.getElementById('scrollup');
+                //当滚动到距离顶部200px时，返回顶部的锚点显示
+                if(t>=200){
+                    scrollup.style.display="block";
+                }else{          //恢复正常
+                    scrollup.style.display="none";
+                }
+            }
+</script>
+<style type="text/css">
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: rgb(253,252,248);
+}
+.header{
+	margin: 0 auto;
+	width: 1380px;
+	height: 100px;
+	font-family:"microsoft yahei";
+	text-align:center;
+	border:1px solid #eee;
+}
+.header .title{
+	margin-left:20px;
+	width:260px;
+	height:90px;
+	font-size:37px;
+	color:#ae4141;
+}
+.header .title a{
+	line-height:90px;
+	color:#ae4141;
+	text-decoration:none;
+}
+.header .title a:hover{
+	text-decoration: none;
+}
+.nav{
+	margin:0 auto;
+	width:1380px;
+	height:50px;
+}
+.nav ul{
+	margin:0px;
+	padding:0px;
+}
+.nav ul li{
+	list-style:none;
+}
+.nav ul li a{
+	display:inline-block;
+	float:left;
+	border:0px;
+	width:230px;
+	height:50px;
+	font-family:"microsoft yahei";
+	font-size:15px;
+	background:#eee;
+	color:#999;
+	text-align:center;
+	line-height:50px;
+	text-decoration:none;
+}
+.nav ul li a:hover{
+	text-decoration:none;
+	color:#fff;
+	background:#333;
+}
+.nav ul li #nav_H5{
+	color:#fff;
+	background:#333;
+}
+.content{
+	margin-top:20px;
+	margin:0 auto;
+	width:1380px;
+	height:3665px;
+}
+.left{
+	float:left;
+	width:228px;
+	height:3665px;
+	font-family:"microsoft yahei";
+	border:1px solid #eee;
+}
+.left_top{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.left_list1{
+	border-bottom:1px solid #eee;
+}
+.left_list1 h3{
+	margin-left:20px;
+}
+.left_list1 ul{
+	padding:0px;
+	margin:0px;
+}	
+.left_list1 ul li{
+	list-style:none;
+}
+.left_list1 ul li a{
+	width:178px;
+	display:inline-block;
+	padding-left:50px;
+	line-height:30px;
+	font-size:14px;
+	color:#666;
+	text-decoration:none;
+}
+.left_list1 ul li a:hover{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list1 #list1_H5{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list2 h3{
+	margin-left:15px;
+}
+.left_list2 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list2 ul li{
+	list-style:none;
+}
+.left_list2 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	font-size:13px;
+	line-height:30px;
+	color:#777;
+	text-decoration:none;
+}
+.left_list2 ul li a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.left_list3 h3{
+	margin-left:15px;
+}
+.left_list3{
+	border-top:1px solid #eee;
+}
+.left_list3 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list3 ul li{
+	list-style:none;
+}
+.left_list3 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	line-height:30px;
+	font-size:13px;
+	color:#000;
+	text-decoration:none;
+
+}
+.left_list3 ul li a:hover{
+	color:#fff;
+	background:#999;
+	text-decoration:none;
+}
+.left_list3 p{
+	font-weight:700;
+	text-align:center;
+	line-height:30px;
+	font-size:14px;
+	color:#0479A7;
+}
+.left_list3 p a{
+	color:#0479A7;
+	text-decoration:none;
+}
+.middle{
+	padding-left:30px;
+	float:left;
+	font-family:"microsoft yahei";
+	font-size:14px;
+	width:890px;
+	height:auto;
+}
+.middle p{
+	line-height:25px;
+}
+.middle table{
+	width:890px;
+	text-align:center;
+	border:1px solid #999;
+	border-collapse:collapse;
+}
+.arg{
+	padding:20px;
+	background:#eee;
+	width:840px;
+	font-size:12px;
+	border:1px dotted #785;
+}
+.middle table tr{
+	height:80px;
+	font-size:13px;
+	line-height:30px;
+	text-indent:1em;
+}
+.middle table tr img{
+	display:block;
+	margin:0 auto;
+}
+.middle table tr td{
+	border:1px solid #999;
+}
+.middle table a{
+	color:#ae4141;
+	text-decoration:underline;
+}
+.title_idx p{
+	padding-left:0px;
+	line-height:25px;
+	font-size:13px;
+}
+.middle p span{
+	color:#00C;
+	font-weight:700;
+}
+.middle_title hr{
+	margin-top:30px;
+}
+.middle_title span a{
+	display:inline-block;
+	margin-right:25px;
+	height:30px;
+	width:100px;
+	text-align:center;
+	line-height:30px;
+	font-size:13px;
+	font-family:"microsoft yahei";
+	color:#444;
+	background:#eee;
+	border:1px solid #ddd;
+	text-decoration:none;
+}
+.middle_title span a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.middle_modular ul li{
+	line-height:30px;
+}
+.CSS3_back ul li{
+	line-height:30px;
+}
+.right{
+	float:right;
+	margin-left:30px;
+	width:198px;
+	height:3665px;
+	border:1px solid #eee;
+}
+.right_tools{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.tools_list{
+	width:175px;
+	height:auto;
+	margin:0 auto;
+}
+.right_tools p{
+	margin:0px;
+	padding:0px;
+}
+.tools_1{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	margin-top:20px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #093 , #063); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #093, #063); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #093, #063); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #093 , #063); /* 标准的语法 */
+}
+.tools_2{
+	margin: auto;
+	width:175px;
+	height:100px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #3cc , #39c); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #3cc, #39c); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #3cc, #39c); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #3cc , #39c); /* 标准的语法 */
+}
+.tools_3{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #939 , #909); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #939, #909); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #939, #909); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #939, #909); /* 标准的语法 */
+}
+.right_link{
+	margin-top:20px;
+	text-align:center;
+}
+.right_link p{
+	margin:0px;
+	padding:0px;
+	width:198px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	font-weight:700;
+	background:#eee;
+}
+.line{
+	width:1380px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.footer{
+	margin:0 auto;
+	width:1380px;
+	height:60px;
+	line-height:60px;
+	font-size:14px;
+	text-align:center;
+	background:#eee;
+	color:#000;
+}
+.copyright{
+	margin:0 auto;
+	height:60px;
+	margin-top:20px;
+	text-align:center;
+	font-size:12px;
+	color:#999;
+}
+#scrollup{
+    position:fixed;
+    bottom:65px;
+    right:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    display: none;
+    font-size:40px;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    background: #777;
+    z-index:99;
+    opacity:0.8;
+}
+#scrollup:hover{
+    opacity:0.7;
+}
+.clearfix{
+	zoom:1;/*兼容IE*/
+}
+.clearfix:before{
+	display:inline-block;
+	content:"";
+	height:0px;
+	line-height:0px;
+	visibility:hidden;
+	clear:both;
+}
+</style>
+
+</head>
+
+<body>
+<div class="header">
+	<div class="title"><a href="../首页.html">玩转JavaScript</a></div>
+</div>
+<div class="nav">
+	<ul>
+		<li><a href="html标签.html">HTML5</a></li>
+		<li><a href="css3简介.html">CSS3</a></li>
+		<li><a href="JavaScript简介.html" id="nav_H5">JavaScript</a></li>
+		<li><a href="jquery简介.html">jQuery</a></li>
+		<li><a href="Web service.html">Web Services</a></li>
+		<li><a href="Web Building.html">Web Building</a></li>
+	</ul>
+</div>
+<div class="content clearfix">
+	<div class="left">
+		<div class="left_top">课程表</div>
+		<div class="left_list1">
+			<h3>参考手册</h3>
+			<ul>
+				<li><a href="JavaScript简介.html">JavaScript简介</a></li>
+				<li><a href="#" id="list1_H5">JavaScript变量</a></li>
+				<li><a href="JavaScript数据类型.html">JavaScript数据类型</a></li>
+				<li><a href="JavaScript对象.html">JavaScript对象</a></li>
+				<li><a href="JavaScript函数.html">JavaScript函数</a></li>
+				<li><a href="JavaScript运算符.html">JavaScript运算符</a></li>
+			</ul>
+		</div>
+		<div class="left_list3">
+			<h3>建站手册</h3>
+			<ul>
+				<li><a href="#">网站构建</a></li>
+				<li><a href="#">万维网联盟(W3C)</a></li>
+				<li><a href="#">浏览器信息</a></li>
+				<li><a href="#">网站品质</a></li>
+				<li><a href="#">语义网</a></li>
+				<li><a href="#">网站主机</a></li>
+			</ul>
+			<p><a href="#">关于玩转JavaScript</a></p>
+			<p><a href="#">帮助JavaScript</a></p>
+		</div>
+	</div>
+	<div class="middle">
+		<div class="middle_title">
+			<h2>JavaScript变量</h2>
+			<span><a href="JavaScript简介.html">&lt;上一节</a></span><span><a href="JavaScript数据类型.html">下一节&gt;</a></span>
+			<hr></hr>
+		</div>
+		<div class="middle_int">
+			<h3>变量是存储信息的容器。</h3>
+			<hr />
+		</div>
+		<h3>实例</h3>
+		<div class="arg">
+			<p>var x=2;</p>
+			<p>var y=3;</p>
+			<p>var z=x+y;</p>
+		</div>
+		<hr />
+		<div class="middle_math">
+			<h3>就像代数那样</h3>
+			<div class="arg">
+				<p>x=2;</p>
+				<p>y=3;</p>
+				<p>z=x+y;</p>
+			</div>
+			<p>在代数中，我们使用字母（比如 x）来保存值（比如 2）。</p>
+			<p>通过上面的表达式 z=x+y，我们能够计算出 z 的值为 5。</p>
+			<p>在 JavaScript 中，这些字母被称为变量。</p>
+			<p><b>提示：</b>您可以把变量看做存储数据的容器。</p>
+		</div>
+		<hr />
+		<div class="middle_var">
+			<h2>JavaScript变量</h2>
+			<p>与代数一样，JavaScript 变量可用于存放值（比如 x=2）和表达式（比如 z=x+y）。</p>
+			<p>变量可以使用短名称（比如 x 和 y），也可以使用描述性更好的名称（比如 age, sum, totalvolume）。</p>
+			<ul>
+				<li>变量必须以字母开头</li>
+				<li>变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）</li>
+				<li>变量名称对大小写敏感（y 和 Y 是不同的变量）</li>
+			</ul>
+			<p><b>提示：</b>JavaScript 语句和 JavaScript 变量都对大小写敏感。</p>
+		</div>
+		<hr />
+		<div class="middle_kind">
+			<h2>JavaScript数据类型</h2>
+			<p>JavaScript 变量还能保存其他数据类型，比如文本值 (name="Bill Gates")。</p>
+			<p>在 JavaScript 中，类似 "Bill Gates" 这样一条文本被称为字符串。</p>
+			<p>JavaScript 变量有很多种类型，但是现在，我们只关注数字和字符串。</p>
+			<p>当您向变量分配文本值时，应该用双引号或单引号包围这个值。</p>
+			<p>当您向变量赋的值是数值时，不要使用引号。如果您用引号包围数值，该值会被作为文本来处理。</p>
+			<h3>实例</h3>
+			<div class="arg">
+				<p>var pi=3.14;</p>
+				<p>var name="Bill Gates";</p>
+				<p>var answer="Yes I am!";</p>
+			</div>
+		</div>
+		<hr />
+		<div class="middle_ano">
+			<h2>声明（创建）JavaScript变量</h2>
+			<p>在 JavaScript 中创建变量通常称为“声明”变量。</p>
+			<p>我们使用 var 关键词来声明变量：</p>
+			<div class="arg">
+				<p>var carname;</p>
+			</div>
+			<p>变量声明之后，该变量是空的（它没有值）。</p>
+			<p>如需向变量赋值，请使用等号：</p>
+			<div class="arg">
+				<p>carname="VolVo";</p>
+			</div>
+			<p>不过，您也可以在声明变量时对其赋值：</p>
+			<div class="arg">
+				<p>var carname="VolVo";</p>
+			</div>
+			<h3>例子</h3>
+			<p>在下面的例子中，我们创建了名为 carname 的变量，并向其赋值 "Volvo"，然后把它放入 id="demo" 的 HTML 段落中：</p>
+			<div class="arg">
+				<p>&lt;p id="demo"&gt;&lt;/p&gt;</p>
+				<p>var carname="Volvo";</p>
+				<p>document.getElementById("demo").innerHTML=carname;</p>
+			</div>
+			<p><b>提示：</b>一个好的编程习惯是，在代码开始处，统一对需要的变量进行声明。</p>
+		</div>
+		<hr />
+		<div class="middle_one">
+			<h2>一条语句，多个变量</h2>
+			<p>您可以在一条语句中声明很多变量。该语句以 var 开头，并使用逗号分隔变量即可:</p>
+			<div class="arg">	
+				<p>var name="Gates", age=56, job="CEO";</p>
+			</div>
+			<p>声明也可横跨多行：</p>
+			<div class="arg">
+				<p>var name="Gates",</p>
+				<p>age=56,</p>
+				<p>job="CEO";</p>
+			</div>
+		</div>
+		<hr />	
+		<div class="middle_unde">
+			<h2>Value = undefined</h2>
+			<p>在计算机程序中，经常会声明无值的变量。未使用值来声明的变量，其值实际上是 undefined。</p>
+			<p>在执行过以下语句后，变量 carname 的值将是 undefined：</p>
+			<div class="arg">
+				<p>var carname;</p>
+			</div>
+		</div>
+		<hr />
+		<div class="middle_renew">
+			<h2>重新声明JavaScript变量</h2>
+			<p>如果重新声明 JavaScript 变量，该变量的值不会丢失：</p>
+			<p>在以下两条语句执行后，变量 carname 的值依然是 "Volvo"：</p>
+			<div class="arg">
+				<p>var carname="VolVo";</p>
+				<p>var carname;</p>
+			</div>
+		</div>
+		<hr />
+		<div class="middle_add">
+			<h2>JavaScript算数</h2>
+			<p>您可以通过 JavaScript 变量来做算数，使用的是 = 和 + 这类运算符：</p>
+			<h3>实例</h3>
+			<div class="arg">
+				<p>y=5;</p>
+				<p>x=y+2;</p>
+			</div>
+			<p>您将在本教程稍后的章节学到更多有关 JavaScript 运算符的知识。</p>
+		</div>
+		<hr />
+	</div>
+	<div class="right">
+		<div class="right_tools"><p>工具箱</p></div>
+		<div class="tools_list">
+			<div class="tools_1"></div>
+			<div class="tools_2"></div>
+			<div class="tools_3"></div>
+		</div>
+		<div class="right_link">
+			<p>赞助商链接</p>
+			<div></div>
+		</div>
+	</div>
+</div>
+<div class="line"><hr></hr></div>
+<div class="footer">
+	<p>玩转JavaScript提供的内容仅供学习和参考，不保证内容的正确性。通过使用本网站随之而来的风险与本站无关。</p>
+</div>
+<div class="copyright">
+	<p>Copyright © 2016-2019 Play with javascript. All Rights Reserved.</p>
+	<p>玩转JavaScript 版权所有</p>
+</div>
+<a id="scrollup" href="#top"><span style="font-size:18px; line-height:50px;">顶</span></a>
+</body>
+</html>

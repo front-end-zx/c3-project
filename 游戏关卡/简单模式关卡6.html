@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>简单模式关卡</title>
+<link rel="shortcut icon" href="icon_font/logo.ico">
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+    $(".explain").hover(function(){
+        $(".left_line1").css({"animation":"rotate 3s linear","animation-fill-mode":"forwards"});
+    },function(){
+        $(".left_line1").css({"animation":"none"});
+    });
+})
+</script>
+<script>
+$(function(){
+    $(".explain").hover(function(){
+        $(".left_line2").css({"animation":"rotate_b 3s linear","animation-fill-mode":"forwards"});
+    },function(){
+        $(".left_line2").css({"animation":"none"});
+    });
+})
+</script>
+<script>
+$(function(){
+    $(".explain").hover(function(){
+        $(".left_line3").css({"animation":"rotate 3s linear","animation-fill-mode":"forwards"});
+    },function(){
+        $(".left_line3").css({"animation":"none"});
+    });
+})
+</script>
+<script>
+$(function(){
+	$(".next").hover(function(){
+		$("#next").attr("src","image_game/next拷贝.png");
+	},function(){
+		$("#next").attr("src","image_game/next.png");
+	});
+	$(".before").hover(function(){
+		$("#head").attr("src","image_game/head拷贝.png");
+	},function(){
+		$("#head").attr("src","image_game/head.png");
+	});
+})
+</script>
+<style type="text/css">
+body,p,h1,h2,h3{
+	padding:0px;
+	margin:0px;
+}
+body{
+	background:url(image_game/easy_bg.jpg) center center fixed no-repeat;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+}
+@keyframes rotate_b{
+	0%{
+		transform:rotate(0deg);
+	}
+	25%{
+		transform:rotate(-120deg);
+	}
+	50%{
+		transform:rotate(-240deg);
+	}
+	100%{
+		transform:rotate(-360deg);
+	}
+}
+@-webkit-keyframes rotate_b{
+	0%{
+		-webkit-transform:rotate(0deg);
+	}
+	25%{
+		-webkit-transform:rotate(120deg);
+	}
+	50%{
+		-webkit-transform:rotate(-240deg);
+	}
+	100%{
+		-webkit-transform:rotate(-360deg);
+	}
+}
+@-moz-keyframes rotate_b{
+	0%{
+		-moz-transform:rotate(0deg);
+	}
+	25%{
+		-moz-transform:rotate(-120deg);
+	}
+	50%{
+		-moz-transform:rotate(-240deg);
+	}
+	100%{
+		-moz-transform:rotate(-360deg);
+	}
+}
+@keyframes rotate{
+	0%{
+		transform:rotate(0deg);
+	}
+	25%{
+		transform:rotate(120deg);
+	}
+	50%{
+		transform:rotate(240deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+@-webkit-keyframes rotate{
+	0%{
+		-webkit-transform:rotate(0deg);
+	}
+	25%{
+		-webkit-transform:rotate(120deg);
+	}
+	50%{
+		-webkit-transform:rotate(240deg);
+	}
+	100%{
+		-webkit-transform:rotate(360deg);
+	}
+}
+@-moz-keyframes rotate{
+	0%{
+		-moz-transform:rotate(0deg);
+	}
+	25%{
+		-moz-transform:rotate(120deg);
+	}
+	50%{
+		-moz-transform:rotate(240deg);
+	}
+	100%{
+		-moz-transform:rotate(360deg);
+	}
+}
+
+.header{
+	height:100px;
+	font-family:"microsoft yahei";
+	font-size:20px;
+	line-height:100px;
+	text-align:center;
+	color:#fff;
+}
+.back{
+	float:left;
+	margin-left:20px;
+}
+.back a{
+	color:#03547d;
+	text-decoration:none;
+}
+.back a:hover{
+	color:#fff;
+	text-decoration:none;
+}
+.back img{
+	height:50px;
+	padding-right:10px;
+	vertical-align:middle;
+}
+.content{
+	margin:0 auto;
+	width:1210px;
+	height:450px;
+	overflow:hidden;
+}
+.content_left{
+	position:relative;
+	float:left;
+	margin-top:150px;
+	width:530px;
+	height:302px;
+	background:url(image_game/机器人.png) no-repeat;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+}
+.left_line1{
+	position:absolute;
+	margin-top:40px;
+	padding-top:80px;
+	padding-left:7px;
+	width:257px;
+	height:184px;
+}
+.left_line1 img{
+	width:255px;
+}
+.left_line2{
+	position:absolute;
+	margin-left:20px;
+	margin-top:61px;
+	padding-left:65px;
+	padding-top:6px;
+	height:217px;
+	width:158px;
+}
+.left_line2 img{
+	width:147px;
+}
+.left_line3{
+	position:absolute;
+	margin-left:57px;
+	margin-top:97px;
+	width:150px;
+	height:150px;
+}
+.left_line3 img{
+	width:75px;
+}
+.content_right{
+	float:right;
+	margin-top:90px;
+	width:530px;
+	height:350px;
+	background:url(image_game/方框.png) no-repeat;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	text-align:center;
+	line-height:30px;
+	font-family:"microsoft yahei";
+	font-size:14px;
+	color:#01b1f2;
+}
+.right_title{
+	padding-top:40px;
+	padding-bottom:10px;
+	margin:0 auto;
+	width:450px;
+	border-bottom:3px solid #01b1f2;
+}
+.right_cnt{
+	width:530px;
+	height:350px;
+	font-size:30px;
+	font-weight:700;
+}
+.right_cnt .number{
+	float:left;
+	margin-left:100px;
+	margin-top:50px;
+	width:30px;
+	height:350px;
+	line-height:50px;
+}
+.right_cnt .explain{
+	float:left;
+	width:300px;
+	margin-top:80px;
+	font-size:25px;
+	text-align:center;
+	line-height:30px;
+}
+.right_cnt .explain a{
+	display:inline-block;
+	margin-top:30px;
+	width:80px;
+	height:40px;
+	border-radius:10px;
+	font-size:16px;
+	text-align:center;
+	line-height:40px;
+	background:linear-gradient(to top,#026892,#01b1f2);
+	background:-webkit-linear-gradient(to top,#026892,#01b1f2);
+	background:-moz-linear-gradient(to top,#026892,#01b1f2);
+	color:#fff;
+	text-decoration:none;
+}
+.right_cnt .explain a:hover{
+	background:#01b1f2;
+}
+.footer{
+	margin:0 auto;
+	padding-top:80px;
+	width:900px;
+	height:100px;
+	font-family:"microsoft yahei";
+	font-size:20px;
+}
+.next{
+	float:right;
+}
+.next a{
+	display:inline-block;
+	font-weight:700;
+	color:#01b1f2;
+	text-decoration:none;
+}
+.next a:hover{
+	color:#fff;
+}
+.next img{
+	vertical-align:middle;
+	height:80px;
+}
+.before{
+	float:left;
+}
+.before a{
+	display:inline-block;
+	font-weight:700;
+	color:#01b1f2;
+	text-decoration:none;
+}
+.before a:hover{
+	color:#fff;
+}
+.before img{
+	vertical-align:middle;
+	height:80px;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="back"><a href="#"><img src="image_game/back.png">返回启动界面</a></div>
+		
+</div>
+<div class="content">
+	<div class="content_left">
+		<div class="left_line1">
+			<img src="image_game/line_1.png" id="img1">
+		</div>
+		<div class="left_line2">
+			<img src="image_game/line_2.png" id="img2">
+		</div>
+		<div class="left_line3">
+			<img src="image_game/line_3.png" id="img3">
+		</div>
+	</div>
+	<div class="content_right">
+		<div class="right_title">
+			<h1>简单模式</h1>
+		</div>
+		<div class="right_cnt">
+			<div class="number">第六关</div>
+			<div class="explain">
+				<p>数组</p>
+				<a href="#">进入游戏</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="before">
+		<img src="image_game/head.png" id="head">
+		<a href="#">上一关</a>
+	</div>
+	<div class="next">
+		<a href="#">下一关</a>
+		<img src="image_game/next.png" id="next">
+	</div>
+</div>
+</body>
+</html>

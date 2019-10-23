@@ -1,0 +1,492 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0px;
+	margin:0px;
+}
+#header{
+	width:1495px;
+	height:75px;
+	border-bottom:2px solid #671a06;
+	font-family:"黑体";
+	font-size:15px;
+	text-align:center;
+	background:black;
+	color:#CCC;
+	overflow:hidden;
+}/*头部*/
+#header a, #header a:hover, #header a:visited{
+	color:#fff;
+	text-decoration:none;
+}
+.left a, .left a:hover, .left a:visited{
+	color:#fff;
+	text-decoration:none;
+}
+.animatedSearch{
+	width: 30px;
+	height: 30px;
+	margin:0px;
+	padding:0 5px;
+	float: left;
+	border-radius: 44px;
+	font-size: 1.2em;
+	background: url(../images/serach.png) no-repeat 50%;
+	color: #fff;
+	transition: width 0.4s ease-in-out;
+	cursor:pointer;
+	float:right;
+}
+.animatedSearch:focus{
+	width: 60%;
+	background: #666 url(../images/serach.png)no-repeat 95% 50%;
+	padding:0px 5px 0px 15px;
+	outline:none;
+	cursor:default;
+}/*搜索*/
+.banner{
+	position:relative;
+	top:0px;
+	left:0px;
+	border:0px;
+	width:1495px;
+	height:auto;
+	overflow:hidden;
+	box-shadow:0 2px 2px #CCCCCC;
+}
+.nav{
+	position: absolute;
+	left: 159px;
+	top: 0px;
+	overflow: hidden;
+	z-index: 9;
+}
+.nav_1{
+	float:left;
+	width: 100px;
+	height: 160px;
+	padding-right:10px;
+	text-align: center;
+	font-size:10px;
+	line-height: 25px;
+	font-family: "黑体";
+	color:#CCC;
+	background:linear-gradient(rgba(43,43,43,0.7), rgba(43,43,43,0));
+}
+.nav_2{
+	float:left;
+	width: 100px;
+	height: 160px;
+	padding-right:10px;
+	text-align: center;
+	font-size:10px;
+	line-height: 25px;
+	font-family: "黑体";
+	color:#CCC;
+	background:linear-gradient(rgba(43,43,43,0.7), rgba(43,43,43,0))
+}
+.nav_3{
+	float:left;
+	width: 100px;
+	height: 160px;
+	padding-right:10px;
+	text-align: center;
+	font-size:10px;
+	line-height: 25px;
+	font-family: "黑体";
+	color:#ccc;
+	background:linear-gradient(rgba(43,43,43,0.7), rgba(43,43,43,0));
+}
+.nav_1 p:hover{
+	color:white;
+	cursor:pointer;
+}
+.nav_2 p:hover{
+	color:white;
+	cursor:pointer;
+}
+.nav_3 p:hover{
+	color:white;
+	cursor:pointer;
+}
+.nav_1:hover{
+	background:linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.nav_2:hover{
+	background:linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.nav_3:hover{
+	background:linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+}/*三个导航栏*/
+.station{
+	position:relative;
+	left:180px;
+	top:20px;
+	height:30px;
+	width:500px;
+	text-align:left;
+	font-family:"微软雅黑";
+	font-size:15px;
+	line-height:25px;
+	color:black;
+}
+.station a{
+	color:black;
+	text-decoration:none;
+}
+.station a:hover{
+	color:#666;
+	text-decoration:underline;
+}
+.F_nav{
+	position:relative;
+	left:180px;
+	top:40px;
+	width:500px;
+	line-height:30px;
+	text-align:center;
+	font-family:"微软雅黑";
+	color:black;
+}
+.F_nav td{
+	border-spacing:20px;
+}
+.F_nav td:hover{
+	cursor:pointer;
+	background:#B90000;
+	color:white;
+}
+.left{
+	position:relative;
+	left:180px;
+	top:60px;
+	padding:30px 0px;
+	width:200px;
+	height:600px;ccolor:white;
+	font-size:15px;
+	font-family:"微软雅黑";
+	text-align:center;
+	color:#999;
+	background:#333;
+}
+.onload a{
+	color:#F30;
+	text-decoration:none;
+}
+.onload a:hover{
+	color:#F30;
+	text-decoration:underline;
+}	
+@font-face {
+  font-family: 'iconfont1';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_wo3gqcscnsm.eot');
+  src: url('//at.alicdn.com/t/font_628978_wo3gqcscnsm.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_wo3gqcscnsm.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_wo3gqcscnsm.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_wo3gqcscnsm.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont2';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_7ayvcndudgv.eot');
+  src: url('//at.alicdn.com/t/font_628978_7ayvcndudgv.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_7ayvcndudgv.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_7ayvcndudgv.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_7ayvcndudgv.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont3';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_7n7bpktl8rc.eot');
+  src: url('//at.alicdn.com/t/font_628978_7n7bpktl8rc.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_7n7bpktl8rc.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_7n7bpktl8rc.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_7n7bpktl8rc.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont4';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_z8x0tlzrnmk.eot');
+  src: url('//at.alicdn.com/t/font_628978_z8x0tlzrnmk.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_z8x0tlzrnmk.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_z8x0tlzrnmk.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_z8x0tlzrnmk.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont5';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_s7qcq18w1n.eot');
+  src: url('//at.alicdn.com/t/font_628978_s7qcq18w1n.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_s7qcq18w1n.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_s7qcq18w1n.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_s7qcq18w1n.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont6';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_e7uxw09t33b.eot');
+  src: url('//at.alicdn.com/t/font_628978_e7uxw09t33b.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_e7uxw09t33b.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_e7uxw09t33b.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_e7uxw09t33b.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont7';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_9kt6usthzmt.eot');
+  src: url('//at.alicdn.com/t/font_628978_9kt6usthzmt.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_9kt6usthzmt.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_9kt6usthzmt.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_9kt6usthzmt.svg#iconfont') format('svg');
+}
+.myiconfont1 {
+	margin-top:30px;
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont1" !important; //名字一致
+	font-size:50px;
+	font-style:normal;
+	letter-spacing:30px;
+	color:#fff;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont1:hover, {
+	background:#FF8000;
+	color:#fff;
+	cursor:pointer;
+}
+.myiconfont2 {
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont2" !important; //名字一致
+	font-size:50px;
+	letter-spacing:30px;
+	font-style:normal;
+	color:#fff;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont2:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.myiconfont3 {
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont3" !important; //名字一致
+	font-size:50px;
+	letter-spacing:30px;
+	font-style:normal;
+	color:#fff;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont3:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.myiconfont4{
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont4" !important; //名字一致
+	font-size:50px;
+	letter-spacing:30px;
+	font-style:normal;
+	color:white;
+	background:#FF8000;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont4:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.myiconfont5{
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont5" !important; //名字一致
+	font-size:50px;
+	letter-spacing:30px;
+	font-style:normal;
+	color:#fff;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont5:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.myiconfont6{
+	padding:10px 0px;
+	height:40px;
+	font-family:"iconfont6" !important; //名字一致
+	font-size:50px;
+	font-style:normal;
+	letter-spacing:30px;
+	color:#fff;
+	border-bottom:1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.myiconfont6:hover{
+	background:#FF8000;
+	color:white;
+	cursor:pointer;
+}
+.myiconfont7{
+	height:35px;
+	padding-left:20px;
+	font-family:"iconfont7" !important; //名字一致
+	font-size:35px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.content{
+	position:absolute;
+	left:380px;
+	top:478px;
+	width:900px;
+	height:1000px;
+	margin-left:35px;
+	border:1px solid #EEE;
+}
+.content1{
+	width:900px;
+	height:400px;
+}
+.content1_1{
+	height:35px;
+	width:900px;
+	background:#EEE;
+	color:#F90;
+}
+.content1_1_F{
+	margin-left:10px;
+	font-family:"微软雅黑";
+	font-size:15px;
+	line-height:35px;
+	color:#F60;	
+}
+.content1_1_T{
+	margin-left:600px;
+	font-family:"微软雅黑";
+	font-size:15px;
+	line-height:35px;
+	color:#F60;	
+}
+.content1_2{
+	margin:20px;
+	width:860px;
+	height:325px;
+	font-family:"微软雅黑";
+	text-align:center;
+
+}
+.content1_2 a{
+	color:black;
+	text-decoration:none;
+}
+.content1_2 a:hover{
+	color:#f60;
+	text-decoration:underline;
+}
+.content2{
+	width:900px;
+	height:570px;
+	margin-top:30px;
+}
+.content2_1{
+	height:35px;
+	width:900px;
+	background:#EEE;
+	color:#F90;
+}
+.content2_1_F{
+	margin-left:10px;
+	font-family:"微软雅黑";
+	font-size:15px;
+	line-height:35px;
+	color:#F60;	
+}
+.content2_2{
+	width:860px;
+	height:230px;
+	margin:20px;
+	border-bottom:1px solid #EEE;
+}
+.content_change{
+	float:left;
+	width:115px;
+	height:30px;
+	margin:10px 50px 10px 50px;
+	border-radius:2px;
+	text-align:center;
+	font-family:"微软雅黑";
+	font-size:17px;
+	line-height:30px;
+	background:#f60;
+	color:white;
+}
+.content_change:hover{
+	color:white;
+	text-decoration:none;
+	background:#f90;
+	cursor:pointer;
+}
+.content2_3{
+	width:860px;
+	height:230px;
+	margin:40px 20px 20px 20px;
+	border-bottom:1px solid #EEE;
+}
+.footer{
+	position:absolute;
+	left:0px;
+	top:1500px;
+	width:1495px;
+	height:200px;
+	margin-top:10px;
+	padding-left:0px;
+	background:#333;
+	font-family:"微软雅黑";
+	font-size:12px;
+	color:#666;
+	line-height:25px;
+	box-shadow:0px 0px 5px #333;
+}
+.foot{
+	padding-left:300px;
+	padding-top:20px;
+	margin:0px;
+	border:0px;
+	width:1100px;
+	height:180px;
+}
+.foot1{
+	width:200px;
+	height:180px;
+}
+.foot2{
+	width:700px;
+	height:180px;
+}
+.foot2 ul:hover{
+	text-decoration:underline;
+}
+a{
+	color:#666;
+	text-decoration:none;
+}
+a:hover{
+	color:#FFF;
+	text-decoration:underline;
+}
+a:visited{
+	color:#666;
+	text-decoration:none;
+}

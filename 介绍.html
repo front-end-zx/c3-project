@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>介绍</title>
+<link rel="stylesheet" style="type/css" href="css/介绍.css">
+</head>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script language="javascript">
+window.onload=function(){
+	$(".weixin").mouseover(function(){
+		$(".weixin_code").css("opacity","1");
+	});
+	$(".weixin").mouseout(function(){
+		$(".weixin_code").css("opacity","0");
+	});
+}
+</script>
+<body>
+<div class="header">
+	<div class="wrap clearfix">
+	    <a class="nav_logo" href="index4.0.html">玩转JavaScript</a>
+		<div class="social">
+			<a href="javascript:void(0);" class="weixin">&#xe61d;</a>
+			<a href="#" class="sina">&#xe6c7;</a>
+		</div>
+		<img src="images/app-二维码.jpg" class="weixin_code">
+	</div>
+</div>
+<div class="con_1">
+	<img src="images/app-1.jpg">
+</div>
+<div class="con_2">
+	<img src="images/app-2.jpg">
+</div>
+<div class="con_3">
+	<img src="images/app-3.jpg">
+</div>
+<div class="con_4">
+	<img src="images/app-4.jpg">
+</div>
+<div class="footer">
+	<p>Copyright © 2016-2019 Play with javascript. All Rights Reserved.</p>
+	<p class="copyright">玩转JavaScript 版权所有</p>
+</div>
+</body>
+</html>

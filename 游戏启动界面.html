@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>游戏启动界面</title>
+<link rel="shortcut icon" href="icon_font/logo.ico">
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+    $("#easy").hover(function(){
+        $("#img1").css({"animation":"rotate 3s linear","animation-fill-mode":"forwards"});
+    },function(){
+        $("#img1").css({"animation":"none"});
+    });
+})
+$(function(){
+    $("#normal").hover(function(){
+        $("#img2").css({"animation":"rotate 3s linear","animation-fill-mode":"forwards"});
+    },function(){
+        $("#img2").css({"animation":"none"});
+    });
+})
+$(function(){
+    $("#diff").hover(function(){
+        $("#img3").css({"animation":"rotate 3s linear","animation-fill-mode":"forwards"});
+    },function(){
+        $("#img3").css({"animation":"none"});
+    });
+})
+</script>
+<style type="text/css">
+@keyframes rotate{
+	0%{
+		transform:rotate(0deg);
+	}
+	25%{
+		transform:rotate(120deg);
+	}
+	50%{
+		transform:rotate(240deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+@-webkit-keyframes rotate{
+	0%{
+		-webkit-transform:rotate(0deg);
+	}
+	25%{
+		-webkit-transform:rotate(120deg);
+	}
+	50%{
+		-webkit-transform:rotate(240deg);
+	}
+	100%{
+		-webkit-transform:rotate(360deg);
+	}
+}
+@-moz-keyframes rotate{
+	0%{
+		-moz-transform:rotate(0deg);
+	}
+	25%{
+		-moz-transform:rotate(120deg);
+	}
+	50%{
+		-moz-transform:rotate(240deg);
+	}
+	100%{
+		-moz-transform:rotate(360deg);
+	}
+}
+@keyframes tada{
+	0%{
+		transform:scare(1);
+	}
+	10%,20%{
+		transform:scale(0.9) rotate(-3deg);
+	}
+	30%,50%,70%,90%{
+		transform:scale(1.2) rotate(3deg);
+	}
+	40%,60%,80%{
+		transform:scale(1.2) rotate(-3deg);
+	}
+	100%{
+		transform:scale(1) rotate(0);
+	}
+}
+@-webkit-keyframes tada{
+	0%{
+		-webkit-transform:scare(1);
+	}
+	10%,20%{
+		-webkit-transform:scale(0.9) rotate(-3deg);
+	}
+	30%,50%,70%,90%{
+		-webkit-transform:scale(1.2) rotate(3deg);
+	}
+	40%,60%,80%{
+		-webkit-transform:scale(1.2) rotate(-3deg);
+	}
+	100%{
+		-webkit-transform:scale(1) rotate(0);
+	}
+}
+@-moz-keyframes tada{
+	0%{
+		-moz-transform:scare(1);
+	}
+	10%,20%{
+		-moz-transform:scale(0.9) rotate(-3deg);
+	}
+	30%,50%,70%,90%{
+		-moz-transform:scale(1.2) rotate(3deg);
+	}
+	40%,60%,80%{
+		-moz-transform:scale(1.2) rotate(-3deg);
+	}
+	100%{
+		-moz-transform:scale(1) rotate(0);
+	}
+}
+body,ul,p,h1,h2,h3,h4{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background:rgb(74,132,196);
+}
+.wrapper{
+	height:150px;
+	color:#fff;
+}
+.header{
+	float:left;
+	width: 450px;
+	height:120px;
+}
+.header .rec{
+	float:left;
+	width:350px;
+	height:40px;
+	background:rgb(45,91,141);
+	font-family:"SimSun";
+	font-size:16px;
+	letter-spacing:2px;
+	text-indent:3em;
+	line-height:40px;
+}
+.header .tri{
+	float:left;
+	border: 20px solid transparent;
+	border-left: 20px solid rgb(45,91,141);
+	width: 0;
+	height: 0;
+}
+.help_wrapper{
+	float:right;
+	padding-top:50px;
+	height:100px;
+	width:200px;
+}
+.help{
+	height:60px;
+	width:60px;
+	border:2px solid #fff;
+	border-radius:50px;
+	text-align:center;
+	background:rgb(45,91,141);
+}
+.help p{
+	padding-top:3px;
+}
+.help p a{
+	color:#fff;
+	text-decoration:none;
+}
+.help:hover{
+	animation:tada 1s .2s ease both;
+    -webkit-animation: tada 1s .2s ease both;
+    -moz-animation: tada 1s .2s ease both;
+}
+.content{
+	height:350px;
+}
+.content_wrap{
+	position:relative;
+	margin:0 auto;
+	width:850px;
+	height:350px;
+}
+.content_left{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.content_right{
+	position:absolute;
+	right:0px;
+	bottom:30px;
+}
+.catalog{
+	margin:0 auto;
+	padding-left:80px;
+	width:900px;
+	height:100px;
+	font-family:"microsoft yahei";
+	font-size:30px;
+	line-height:100px;
+	color:#fff;
+}
+.catalog a{
+	margin-left:30px;
+	color:#fff;
+	text-decoration:none;
+}
+.catalog a:hover{
+	border-bottom:4px solid #fff;
+}
+.catalog_check1{
+	float:left;
+	width:300px;
+	height:100px;
+}
+.catalog_check1 img{
+	display:block;
+	float:left;
+	margin-top:20px;
+	vertical-align:middle;
+}
+.catalog_check2{
+	float:left;
+	width:300px;
+	height:100px;
+}
+.catalog_check2 img{
+	display:block;
+	float:left;
+	margin-top:20px;
+	vertical-align:middle;
+}
+.catalog_check3{
+	float:left;
+	width:300px;
+	height:100px;
+}
+.catalog_check2 img{
+	display:block;
+	float:left;
+	margin-top:20px;
+	vertical-align:middle;
+}
+.clause{
+	margin:0 auto;
+	padding-top:30px;
+	width:1210px;
+	height:75px;
+	font-family:"microsoft yahei";
+	font-size:14px;
+	text-align:center;
+	line-height:75px;
+	color:#fff;
+}
+.clause a{
+	color:#fff;
+	text-decoration:none;
+}
+.clause a:hover{
+	border-bottom:2px solid #fff;
+}
+#myCheck{
+	display:none;
+}
+#myCheck + label{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	text-align:center;
+	line-height:20px;
+	vertical-align:middle;
+	border:1px solid #d3d3d3;
+	border-radius:5px;
+	background-color:#fff;
+}
+#myCheck:checked + label{
+    background-color: #eee;
+}
+#myCheck:checked + label:after{
+    content:"\2714";
+	color:#000;
+	font-size:20px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="rec">合理安排时间，享受健康生活</div>
+		<div class="tri"></div>
+	</div>
+	<div class="help_wrapper">
+		<div class="help">
+			<p><a href="#">?</a></p>
+			<p><a href="#">帮助</a></p>
+		</div>
+	</div>
+</div>
+<div class="content">
+	<div class="content_wrap">
+		<div class="content_left"><img src="游戏关卡/image_game/玩转.png"></div>
+		<div class="content_right"><img src="游戏关卡/image_game/JavaScript.png"></div>
+	</div>
+</div>
+<div class="catalog">
+	<div class="catalog_check1">
+		<img src="游戏关卡/image_game/before.png" id="img1"><a href="#" title="简单模式" id="easy">简单模式</a>
+	</div>
+	<div class="catalog_check2">
+		<img src="游戏关卡/image_game/before.png" id="img2"><a href="#" title="普通模式"id="normal">普通模式</a>
+	</div>
+	<div class="catalog_check2">
+		<img src="游戏关卡/image_game/before.png" id="img3"><a href="#" title="困难模式" id="diff">困难模式</a>
+	</div>
+</div>
+<div class="clause">
+	<form action="#" method="post">
+		<input type="checkbox" checked="checked" id="myCheck">
+		<label for="myCheck"></label>
+		<a href="#" title="服务协议">我已经详细阅读并同意玩转JS游戏使用许可服务协议和玩转JS隐私政策</a>
+	</form>
+</div>
+</body>
+</html>

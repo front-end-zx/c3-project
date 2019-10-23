@@ -1,0 +1,990 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>html5表单输入类型</title>
+<link rel="shortcut icon" href="../icon_font/logo.ico">
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script language="javascript">
+$(function(){
+	$(".title").hover(function(){
+		$(this).css("border-bottom","5px solid #ae4141");
+	},function(){
+		$(this).css("border-bottom","none");
+	});
+})
+</script>
+<script language="javascript">
+$(function(){
+	$("#tb_ban tr:nth-child(2n+1)").css("background","#eee");
+	$("#tb_ban tr:first-child").css({"background":"#3F3F3F","color":"#fff","height":"35px"});
+})
+</script>
+<script type="text/javascript">
+         window.onscroll= function(){
+                //变量t是滚动条滚动时，距离顶部的距离
+                var t = document.documentElement.scrollTop||document.body.scrollTop;
+                var scrollup = document.getElementById('scrollup');
+                //当滚动到距离顶部200px时，返回顶部的锚点显示
+                if(t>=200){
+                    scrollup.style.display="block";
+                }else{          //恢复正常
+                    scrollup.style.display="none";
+                }
+            }
+</script>
+
+<style type="text/css">
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: rgb(253,252,248);
+}
+.header{
+	margin: 0 auto;
+	width: 1380px;
+	height: 100px;
+	font-family:"microsoft yahei";
+	text-align:center;
+	border:1px solid #eee;
+}
+#list2_H5{
+	background:#ae4141;
+	color:#fff;
+}
+.header .title{
+	margin-left:20px;
+	width:260px;
+	height:90px;
+	font-size:37px;
+	color:#ae4141;
+}
+.header .title a{
+	line-height:90px;
+	color:#ae4141;
+	text-decoration:none;
+}
+.header .title a:hover{
+	text-decoration: none;
+}
+.nav{
+	margin:0 auto;
+	width:1380px;
+	height:50px;
+}
+.nav ul{
+	margin:0px;
+	padding:0px;
+}
+.nav ul li{
+	list-style:none;
+}
+.nav ul li a{
+	display:inline-block;
+	float:left;
+	border:0px;
+	width:230px;
+	height:50px;
+	font-family:"microsoft yahei";
+	font-size:15px;
+	background:#eee;
+	color:#999;
+	text-align:center;
+	line-height:50px;
+	text-decoration:none;
+}
+.nav ul li a:hover{
+	text-decoration:none;
+	color:#fff;
+	background:#333;
+}
+.nav ul li #nav_H5{
+	color:#fff;
+	background:#333;
+}
+.content{
+	margin-top:20px;
+	margin:0 auto;
+	width:1380px;
+	height:10255px;
+}
+.left{
+	float:left;
+	width:228px;
+	height:10255px;
+	font-family:"microsoft yahei";
+	border:1px solid #eee;
+}
+.left_top{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.left_list1{
+	border-bottom:1px solid #eee;
+}
+.left_list1 h3{
+	margin-left:20px;
+}
+.left_list1 ul{
+	padding:0px;
+	margin:0px;
+}	
+.left_list1 ul li{
+	list-style:none;
+}
+.left_list1 ul li a{
+	width:178px;
+	display:inline-block;
+	padding-left:50px;
+	line-height:30px;
+	font-size:14px;
+	color:#666;
+	text-decoration:none;
+}
+.left_list1 ul li a:hover{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list1 #list1_H5{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list2 h3{
+	margin-left:15px;
+}
+.left_list2 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list2 ul li{
+	list-style:none;
+}
+.left_list2 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	font-size:13px;
+	line-height:30px;
+	color:#777;
+	text-decoration:none;
+}
+.left_list2 ul li a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.left_list3 h3{
+	margin-left:15px;
+}
+.left_list3{
+	border-top:1px solid #eee;
+}
+.left_list3 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list3 ul li{
+	list-style:none;
+}
+.left_list3 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	line-height:30px;
+	font-size:13px;
+	color:#000;
+	text-decoration:none;
+}
+.left_list3 ul li a:hover{
+	color:#fff;
+	background:#999;
+	text-decoration:none;
+}
+.left_list3 p{
+	font-weight:700;
+	text-align:center;
+	line-height:30px;
+	font-size:14px;
+	color:#0479A7;
+}
+.left_list3 p a{
+	color:#0479A7;
+	text-decoration:none;
+}
+.middle{
+	float:left;
+	padding-left:30px;
+	font-size:14px;
+	font-family:"microsoft yahei";
+	width:890px;
+	height:auto;
+}
+.title_idx p{
+	padding-left:0px;
+	line-height:25px;
+}
+.middle p span{
+	color:#00C;
+	font-weight:700;
+}
+.middle_title span a{
+	display:inline-block;
+	margin-right:25px;
+	height:30px;
+	width:100px;
+	text-align:center;
+	line-height:30px;
+	font-size:13px;
+	font-family:"microsoft yahei";
+	color:#444;
+	background:#eee;
+	border:1px solid #ddd;
+	text-decoration:none;
+}
+.middle_title span a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.text_arg{
+	padding:20px;
+	height:230px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.password_arg{
+	padding:20px;
+	height:230px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.submit_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.radio_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.checkbox_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.button_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.number_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.date_arg1{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.date_arg2{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.color_arg{
+	padding:20px;
+	width:810px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.range_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.month_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.week_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.time_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.datetime_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.datetime-local_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.ban_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.email_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.search_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.tel_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.url_arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.middle_ban table{
+	width:860px;
+	border:1px solid #eee;
+}
+.middle_ban table tr{
+	height:30px;
+	font-size:13px;
+	line-height:30px;
+	text-indent:1em;
+}
+.right{
+	float:right;
+	margin-left:30px;
+	width:198px;
+	height:10255px;
+	border:1px solid #eee;
+}
+.right_tools{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.tools_list{
+	width:175px;
+	height:auto;
+	margin:0 auto;
+}
+.right_tools p{
+	margin:0px;
+	padding:0px;
+}
+.tools_1{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	margin-top:20px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #093 , #063); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #093, #063); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #093, #063); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #093 , #063); /* 标准的语法 */
+}
+.tools_2{
+	margin: auto;
+	width:175px;
+	height:100px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #3cc , #39c); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #3cc, #39c); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #3cc, #39c); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #3cc , #39c); /* 标准的语法 */
+}
+.tools_3{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #939 , #909); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #939, #909); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #939, #909); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #939, #909); /* 标准的语法 */
+}
+.right_link{
+	margin-top:20px;
+	text-align:center;
+}
+.right_link p{
+	margin:0px;
+	padding:0px;
+	width:198px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	font-weight:700;
+	background:#eee;
+}
+.line{
+	width:1380px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.footer{
+	margin:0 auto;
+	width:1380px;
+	height:60px;
+	line-height:60px;
+	font-size:14px;
+	text-align:center;
+	background:#eee;
+	color:#000;
+}
+.copyright{
+	margin:0 auto;
+	height:60px;
+	margin-top:20px;
+	text-align:center;
+	font-size:12px;
+	color:#999;
+}
+#scrollup{
+    position:fixed;
+    bottom:65px;
+    right:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    display: none;
+    font-size:40px;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    background: #777;
+    z-index:99;
+    opacity:0.8;
+}
+#scrollup:hover{
+    opacity:0.7;
+}
+.clearfix{
+	zoom:1;/*兼容IE*/
+}
+.clearfix:before{
+	display:inline-block;
+	content:"";
+	height:0px;
+	line-height:0px;
+	visibility:hidden;
+	clear:both;
+}
+</style>
+
+</head>
+
+<body>
+<div class="header">
+	<div class="title"><a href="../首页.html">玩转JavaScript</a></div>
+</div>
+<div class="nav">
+	<ul>
+		<li><a href="html标签.html" id="nav_H5">HTML5</a></li>
+		<li><a href="css3简介.html">CSS3</a></li>
+		<li><a href="JavaScript简介.html">JavaScript</a></li>
+		<li><a href="jquery简介.html">jQuery</a></li>
+		<li><a href="Web service.html">Web Services</a></li>
+		<li><a href="Web Building.html">Web Building</a></li>
+	</ul>
+</div>
+<div class="content clearfix">
+	<div class="left">
+		<div class="left_top">课程表</div>
+		<div class="left_list1">
+			<h3>参考手册</h3>
+			<ul>
+					<li><a href="html标签.html">HTML5标签</a></li>
+					<li><a href="html5属性.html">HTML5属性</a></li>
+					<li><a href="html5事件.html">HTML5事件</a></li>
+					<li><a href="#" id="list1_H5">HTML5表单</a></li>
+					<li><a href="html5视频音频.html">HTML5视频/音频</a></li>
+					<li><a href="html画布.html">HTML5画布</a></li>
+				</ul>
+		</div>
+		<div class="left_list2">
+			<h3>HTML5表单</h3>
+			<ul>
+				<li><a href="html5表单.html">HTML5表单</a></li>
+				<li><a href="html5表单元素.html">HTML5表单元素</a></li>
+				<li><a href="#" id="list2_H5">HTML5输入类型</a></li>
+				<li><a href="html表单输入属性.html">HTML5输入属性</a></li>
+			</ul>
+		</div>
+		<div class="left_list3">
+			<h3>建站手册</h3>
+			<ul>
+				<li><a href="#">网站构建</a></li>
+				<li><a href="#">万维网联盟(W3C)</a></li>
+				<li><a href="#">浏览器信息</a></li>
+				<li><a href="#">网站品质</a></li>
+				<li><a href="#">语义网</a></li>
+				<li><a href="#">网站主机</a></li>
+			</ul>
+			<p><a href="#">关于玩转JavaScript</a></p>
+			<p><a href="#">帮助JavaScript</a></p>
+		</div>
+	</div>
+	<div class="middle">
+		<div class="middle_title">
+			<h1>HTML输入类型</h1>
+			<span><a href="htm5表单元素.html">&lt;上一节</a></span><span><a href="html表单输入属性.html">下一节&gt;</a></span><br><br>
+			<hr></hr>
+		</div>
+		<h2>本章描述&lt;input&gt;元素的输入类型。</h2>
+		<hr></hr>
+		<div class="middle_text">
+			<h2>输入类型：text</h2>
+			<p><b>&lt;input type="text"&gt;</b>定义供文本输入的单行输入字段：</p>
+			<h3>实例：</h3>
+			<div class="text_arg">
+				<p>&lt;form&gt;</p>
+				<p>First name:&lt;br&gt;</p>
+				<p>&lt;input type="text" name="firstname"&gt;</p>
+				<p>&lt;br&gt;</p>
+				<p>Last name:&lt;br&gt;</p>
+				<p>&lt;input type="text" name="lastname"&gt;</p>
+				<p>&lt;/form&gt;</p> 
+			</div>
+			<p>以上HTML代码在浏览器中看上去是这样的：</p>
+			<form>
+ 				First name:<br><br>
+				<input type="text" name="firstname">
+				<br><br>
+ 				Last name:<br><br>
+				<input type="text" name="lastname">
+			</form> 
+			<br>
+			<hr></hr>
+		</div>
+		<div class="middle_password">
+			<h2>输入类型：password</h2>
+			<p>&lt;input type="password"&gt;定义密码字段：</p>
+			<h3>实例：</h3>
+			<div class="password_arg">
+				<p>&lt;form&gt;</p>
+				<p>User name:&lt;br&gt;</p>
+				<p>&lt;input type="text" name="username"&gt;</p>
+				<p>&lt;br&gt;</p>
+				<p>User password:&lt;br&gt;</p>
+				<p>&lt;input type="password" name="psw"&gt;</p>
+				<p>&lt;/form&gt;</p> 
+			</div>
+			<p>以上HTML代码在浏览器中看上去是这样的：</p>
+			<form>
+			 User name:<br><br>
+				<input type="text" name="username">
+				<br><br>
+ 			User password:<br><br>
+				<input type="password" name="psw">
+			</form> 
+			<p><b>注释：</b>password字段中的字符会被掩饰处理（显示为星号或实心圆）。</p>
+			<br>
+			<hr></hr>
+		</div>
+		<div class="middle_submit">
+			<h2>输入类型：submit</h2>
+			<p>&lt;input type="submit"&gt;定义提交表单数据至表单处理程序的按钮。</p>
+			<p>表单处理程序(form-hander)通常是包含处理输入数据的脚本的服务器页面。</p>
+			<p>在表单的action属性中规定表单处理程序(form-hander)：</p>
+			<h3>实例：</h3>
+			<div class="submit_arg">
+				<p>&lt;form action="action_page.php"&gt;</p>
+				<p>First name:&lt;br&gt;</p>
+				<p>&lt;input type="text" name="firstname" value="Mickey"&gt;</p>
+				<p>&lt;br&gt;</p>
+				<p>Last name:&lt;br&gt;</p>
+				<p>&lt;input type="text" name="lastname" value="Mouse"&gt;</p>
+				<p>&lt;br&gt;&lt;br&gt;</p>
+				<p>&lt;input type="submit" value="Submit"&gt;</p>
+				<p>&lt;/form&gt;</p> 
+			</div>
+			<p>以上HTML代码在浏览器中看上去是这样的：</p>
+			<form action="action_page.php">
+				First name:<br><br>
+				<input type="text" name="firstname" value="Mickey">
+				<br><br>
+				Last name:<br><br>
+				<input type="text" name="lastname" value="Mouse">
+				<br><br>
+				<input type="submit" value="Submit">
+			</form>
+			<br><hr></hr> 
+		</div>
+		<div class="middle_radio">
+			<h2>输入类型：radio</h2>
+			<p>&lt;input type="radio"&gt;定义单选按钮。</p>
+			<h3>实例：</h3>
+			<div class="radio_arg">
+				<p>&lt;form&gt;</p>
+				<p>&lt;input type="radio" name="sex" value="male" checked&gt;Male</p>
+				<p>&lt;br&gt;</p>
+				<p>&lt;input type="radio" name="sex" value="female"&gt;Female</p>
+				<p>&lt;/form&gt; </p>
+			</div>
+			<p>以上HTML代码在浏览器中看上去是这样的：</p>
+			<form>
+				<input type="radio" name="sex" value="male" checked>Male
+				<br><br>
+				<input type="radio" name="sex" value="female">Female
+			</form>
+			<br>
+			<hr></hr> 
+		</div>
+		<div class="middle_checkbox">
+			<h2>输入类型：checkbox</h2>
+			<p>&lt;input type="checkbox"&gt;定义复选框。</p>
+			<p>复选框允许用户在有限数量的选项中选择零个或多个选项。</p>
+			<h3>实例：</h3>
+			<div class="checkbox_arg">
+				<p>&lt;form&gt;</p>
+				<p>&lt;input type="checkbox" name="vehicle" value="Bike"&gt;I have a bike</p>
+				<p>&lt;br&gt;</p>
+				<p>&lt;input type="checkbox" name="vehicle" value="Car"&gt;I have a car</p> 
+				<p>&lt;/form&gt; </p>
+			</div>
+			<p>以上HTML代码在浏览器中看上去是这样的：</p>
+			<form>
+				<input type="checkbox" name="vehicle" value="Bike">I have a bike
+				<br><br>
+				<input type="checkbox" name="vehicle" value="Car">I have a car 
+			</form> 
+			<br><hr></hr>
+		</div>
+		<div class="middle_button">
+			<h2>输入类型：button</h2>
+			<p>&lt;input type="button"&gt;定义按钮。</p>
+			<h3>实例：</h3>
+			<div class="button_arg">
+				<p>&lt;input type="button" onclick="alert('Hello World!')" value="Click Me!"&gt;</p>
+			</div>
+			<p>以上HTML代码在浏览器中看上去是这样的：</p>
+			<br>
+			<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+			<br>
+			<br>
+			<hr></hr>
+		</div>
+		<div class="middle_list">
+			<h2>HTML5输入类型</h2>
+			<p>HTML5增加了多个输入类型：</p>
+			<ul>
+				<li>color</li>
+				<li>date</li>
+				<li>datetime</li>
+				<li>datetime-local</li>
+				<li>email</li>
+				<li>month</li>
+				<li>number</li>
+				<li>range</li>
+				<li>search</li>
+				<li>tel</li>
+				<li>time</li>
+				<li>url</li>
+				<li>week</li>
+			</ul>
+			<p><b>注释：</b>老式web浏览器不支持输入类型，会被视为输入类型text。<p>
+			<br>
+			<hr></hr> 
+		</div>
+		<div class="middle_number">
+			<h2>输入类型：number</h2>
+			<p>&lt;input type="number"&gt;用于应该包含数字值的输入字段。</p>
+			<p>您能够对数字做出限制。</p>
+			<p>根据浏览器支持，限制可应用到输入字段。</p>
+			<h3>实例：</h3>
+			<div class="number_arg">
+				<p>&lt;form&gt;</p>
+				<p>Quantity (between 1 and 5):</p>
+				<p>&lt;input type="number" name="quantity" min="1" max="5"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br>
+				<hr></hr>
+		</div>
+		<div class="middle_ban">
+			<h2>输入限制</h2>
+			<p>这里列出一些常用的输入限制（其中一些是HTML5新增的）：</p>
+			<table id="tb_ban">
+				<tr>
+					<th>属性</th><th>描述</th>
+				</tr>
+				<tr>
+					<td>disabled</td><td>规定输入字段应该被禁用。</td>
+				</tr>
+				<tr>
+					<td>max</td><td>规定输入字段的最大值。</td>
+				</tr>
+				<tr>
+					<td>maxlength</td><td>规定输入字段的最大字符数。</td>
+				</tr>
+				<tr>
+					<td>min</td><td>规定输入字段的最小值。</td>
+				</tr>
+				<tr> 	
+					<td>pattern</td><td>规定通过其检查输入值的正则表达式。</td>
+				</tr>
+				<tr>
+					<td>readonly</td><td>规定输入字段为只读（无法修改）。</td>
+				</tr>
+				<tr>
+					<td>required</td><td>规定输入字段是必需的（必须填写）。</td>
+				</tr>
+				<tr>
+					<td>size</td><td>规定输入字段的长度（以字符计）。</td>
+				</tr>
+				<tr>
+					<td>step</td><td>规定输入字段的合法数字间隔。</td>
+				</tr>
+				<tr>
+					<td>value</td><td>规定输入字段的默认值。</td>
+				</tr>
+			</table>
+			<p>您将在下一章学到更多有关输入限制的知识。</p>
+			<h3>实例：</h3>
+			<div class="ban_arg">
+				<p>&lt;form&gt;</p>
+				<p>Quanity:</p>
+				<p>&lt;input type="number" name="points" min="0" max="100" step="10" value="30"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_date">
+			<h2>输入类型：date</h2>
+			<p><b>&lt;input type="date"&gt;</b>用于应该包含日期的输入字段。</p>
+			<p>根据浏览器支持，日期选择器会出现在输入字段中。</p>
+			<h3>实例：</h3>
+			<div class="date_arg1">
+				<p>&lt;form&gt;</p>
+				<p>Birthday:</p>
+				<p>&lt;input type="date" name="body"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<p>您可以向输入添加限制：</p>
+			<h3>实例：</h3>
+			<div class="date_arg2">
+				<p>&lt;form&gt;</p>
+				<p>Enter a date before 1980-01-01:</p>
+				<p>&lt;input type="date" name="bday" max="1979-12-31"&gt;&lt;br&gt;</p>
+				<p>Enter a date after 2000-01-01:</p>
+				<p>&lt;input type="date" name="bday" min="2000-01-02"&gt;&lt;br&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_color">
+			<h2>输入类型：color</h2>
+			<p><b>&lt;input type="color"&gt;</b>用于应该包含颜色的输入字段。</p>
+			<p>根据浏览器支持，颜色选择器会出现输入字段中。</p>
+			<h3>实例：</h3>
+			<div class="color_arg">
+				<p>&lt;form&gt;</p>
+				<p>Select your favorite color:</p>
+				<p>&lt;input type="color" name="favcolor"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_range">
+			<p><b>&lt;input type="range"&gt;</b>用于应该包含一定范围的值得输入字段。</p>
+			<p>根据浏览器支持，输入字段能够显示为滑块控件。</p>
+			<h3>实例：</h3>
+			<div class="range_arg">
+				<p>&lt;form&gt;</p>
+				<p>&lt;input type="range" name="points" min="0" max="10"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<p>您能够使用如下属性来规定限制：min、max、step、value。</p>
+			<br><hr></hr>
+		</div>
+		<div class="middle_month">
+			<h2>输入类型：month</h2>
+			<p><b>&lt;input type="month"&gt;</b>允许用户选择月份和年份。</p>
+			<p>根据浏览器支持，日期选择器会出现输入字段中。</p>
+			<h3>实例：</h3>
+			<div class=""month_arg>
+				<p>&lt;form&gt;</p>
+				<p>Birthday (month and year):</p>
+				<p>&lt;input type="month" name="bdaymonth"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_week">
+			<h2>输入类型：week</h2>
+			<p><b>&lt;input type="week"&gt;</b>允许用户选择周和年。</p>
+			<p>根据浏览器支持，时间选择器会出现在输入字段中。</p>
+			<h3>实例：</h3>
+			<div class="week_arg">
+				<p>&lt;form&gt;</p>
+				<p>Select a week:</p>
+				<p>&ltinput type="week" name="week_year"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_time">
+			<h2>输入类型：time</h2>
+			<p><b>&lt;input type="time"&gt;</b>允许选择时间	（无时区）。</p>
+			<p>根据浏览器支持，时间选择器会出现输入字段中。</p>
+			<h3>实例：</h3>
+			<div class="time_arg">
+				<p>&lt;form&gt;</p>
+				<p>Select a time;</p>
+				<p>&lt;input type="time" name="usr_time"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_datetime">
+			<h2>输入类型：datetime</h2>
+			<p><b>&lt;input type="datetime"&gt;</b>允许选择时间	（有时区）。</p>
+			<p>根据浏览器支持，时间选择器会出现输入字段中。</p>
+			<h3>实例：</h3>
+			<div class="datetime_arg">
+				<p>&lt;form&gt;</p>
+				<p>Birthday(date and time):</p>
+				<p>&lt;input type="datetime" name="bodytime"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_datetime-local">
+			<h2>输入类型：time</h2>
+			<p><b>&lt;input type="datetime-local"&gt;</b>允许用户选择时间	（无时区）。</p>
+			<p>根据浏览器支持，时间选择器会出现输入字段中。</p>
+			<h3>实例：</h3>
+			<div class="datetime-local_arg">
+				<p>&lt;form&gt;</p>
+				<p>Birthday(date and time):</p>
+				<p>&lt;input type="datetime-local" name="bodytime"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_email">
+			<h2>输入类型：email</h2>
+			<p><b>&lt;input type="email"&gt;</b>用于应该包含电子邮件地址的输入字段。</p>
+			<p>根据浏览器支持，能够在被提交时自动对电子邮件地址进行验证。</p>
+			<p>某些智能手机会识别 email 类型，并在键盘增加 ".com" 以匹配电子邮件输入。</p>
+			<h3>实例：</h3>
+			<div class="email_arg">
+				<p>&lt;form&gt;</p>
+				<p>E-mail:</p>
+				<p>&lt;input type="email" name="email"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_search">
+			<h2>输入类型：search</h2>
+			<p><b>&lt;input type="search"&gt;</b>用于搜索字段（搜索字段的表现类似常规文本字段）。</p>
+			<p>根据浏览器支持，时间选择器会出现输入字段中。</p>
+			<h3>实例：</h3>
+			<div class="search_arg">
+				<p>&lt;form&gt;</p>
+				<p>Search Google:</p>
+				<p>&lt;input type="search" name="googlesearch"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_tel">
+			<h2>输入类型：tel</h2>
+			<p><b>&lt;input type="tel"&gt;</b>用于应该包含电话号码的输入字段。</p>
+			<p>目前只有 Safari 8 支持 tel 类型。</p>
+			<h3>实例：</h3>
+			<div class="tel_arg">
+				<p>&lt;form&gt;</p>
+				<p>Telephone:</p>
+				<p>&lt;input type="tel" name="usrtel"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_url">
+			<h2>输入类型：url</h2>
+			<p><b>&lt;input type="url"&gt;</b>用于应该包含 URL 地址的输入字段。</p>
+			<p>根据浏览器支持，在提交时能够自动验证 url 字段。</p>
+			<p>某些智能手机识别 url 类型，并向键盘添加 ".com" 以匹配 url 输入。</p>
+			<h3>实例：</h3>
+			<div class="url_arg">
+				<p>&lt;form&gt;</p>
+				<p>Add your homepage:</p>
+				<p>&lt;input type="url" name="homepage"&gt;</p>
+				<p>&lt;/form&gt;</p>
+			</div>
+			<br><hr></hr>
+		</div>
+	</div>
+	<div class="right">
+		<div class="right_tools"><p>工具箱</p></div>
+		<div class="tools_list">
+			<div class="tools_1"></div>
+			<div class="tools_2"></div>
+			<div class="tools_3"></div>
+		</div>
+		<div class="right_link">
+			<p>赞助商链接</p>
+			<div></div>
+		</div>
+	</div>
+</div>
+<div class="line"><hr></hr></div>
+<div class="footer">
+	<p>玩转JavaScript提供的内容仅供学习和参考，不保证内容的正确性。通过使用本网站随之而来的风险与本站无关。</p>
+</div>
+<div class="copyright">
+	<p>Copyright © 2016-2019 Play with javascript. All Rights Reserved.</p>
+	<p>玩转JavaScript 版权所有</p>
+</div>
+<a id="scrollup" href="#top"><span style="font-size:18px; line-height:50px;">顶</span></a>
+</body>
+</html>

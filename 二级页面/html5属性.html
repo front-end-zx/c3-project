@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>html属性</title>
+<link rel="shortcut icon" href="../icon_font/logo.ico">
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script language="javascript">
+$(function(){
+	$(".title").hover(function(){
+		$(this).css("border-bottom","5px solid #ae4141");
+	},function(){
+		$(this).css("border-bottom","none");
+	});
+})
+</script>
+<script language="javascript">
+$(function(){
+	$("tr:nth-child(2n+1)").css("background","#eee");
+	$("tr:first-child").css({"background":"#3F3F3F","color":"#fff","height":"35px"});
+})
+</script>
+<script type="text/javascript">
+         window.onscroll= function(){
+                //变量t是滚动条滚动时，距离顶部的距离
+                var t = document.documentElement.scrollTop||document.body.scrollTop;
+                var scrollup = document.getElementById('scrollup');
+                //当滚动到距离顶部200px时，返回顶部的锚点显示
+                if(t>=200){
+                    scrollup.style.display="block";
+                }else{          //恢复正常
+                    scrollup.style.display="none";
+                }
+            }
+</script>
+<style type="text/css">
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: rgb(253,252,248);
+}
+.header{
+	margin: 0 auto;
+	width: 1380px;
+	height: 100px;
+	font-family:"microsoft yahei";
+	text-align:center;
+	border:1px solid #eee;
+}
+.header .title{
+	margin-left:20px;
+	width:260px;
+	height:90px;
+	font-size:37px;
+	color:#ae4141;
+}
+.header .title a{
+	line-height:90px;
+	color:#ae4141;
+	text-decoration:none;
+}
+.header .title a:hover{
+	text-decoration: none;
+}
+.nav{
+	margin:0 auto;
+	width:1380px;
+	height:50px;
+}
+.nav ul{
+	margin:0px;
+	padding:0px;
+}
+.nav ul li{
+	list-style:none;
+}
+.nav ul li a{
+	display:inline-block;
+	float:left;
+	border:0px;
+	width:230px;
+	height:50px;
+	font-family:"microsoft yahei";
+	font-size:15px;
+	background:#eee;
+	color:#999;
+	text-align:center;
+	line-height:50px;
+	text-decoration:none;
+}
+.nav ul li a:hover{
+	text-decoration:none;
+	color:#fff;
+	background:#333;
+}
+.nav ul li #nav_H5{
+	color:#fff;
+	background:#333;
+}
+.content{
+	margin-top:20px;
+	margin:0 auto;
+	width:1380px;
+	height:1200px;
+}
+.left{
+	float:left;
+	width:228px;
+	height:1200px;
+	font-family:"microsoft yahei";
+	border:1px solid #eee;
+}
+.left_top{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.left_list1{
+	border-bottom:1px solid #eee;
+}
+.left_list1 h3{
+	margin-left:20px;
+}
+.left_list1 ul{
+	padding:0px;
+	margin:0px;
+}	
+.left_list1 ul li{
+	list-style:none;
+}
+.left_list1 ul li a{
+	width:178px;
+	display:inline-block;
+	padding-left:50px;
+	line-height:30px;
+	font-size:14px;
+	color:#666;
+	text-decoration:none;
+}
+.left_list1 ul li a:hover{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list1 #list1_H5{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list2 h3{
+	margin-left:15px;
+}
+.left_list2 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list2 ul li{
+	list-style:none;
+}
+.left_list2 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	font-size:13px;
+	line-height:30px;
+	color:#777;
+	text-decoration:none;
+}
+.left_list2 ul li a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.left_list3 h3{
+	margin-left:15px;
+}
+.left_list3{
+	border-top:1px solid #eee;
+}
+.left_list3 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list3 ul li{
+	list-style:none;
+}
+.left_list3 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	line-height:30px;
+	font-size:13px;
+	color:#000;
+	text-decoration:none;
+}
+.left_list3 ul li a:hover{
+	color:#fff;
+	background:#999;
+	text-decoration:none;
+}
+.left_list3 p{
+	font-weight:700;
+	text-align:center;
+	line-height:30px;
+	font-size:14px;
+	color:#0479A7;
+}
+.left_list3 p a{
+	color:#0479A7;
+	text-decoration:none;
+}
+.middle{
+	float:left;
+	width:920px;
+	height:auto;
+}
+.middle_title{
+	padding-left:30px;
+}
+.middle p {
+	padding-left:30px;
+}
+.middle p span{
+	color:#00C;
+	font-weight:700;
+}
+.middle_title hr{
+	margin-top:30px;
+}
+.middle_title span a{
+	display:inline-block;
+	margin-right:25px;
+	height:30px;
+	width:100px;
+	text-align:center;
+	line-height:30px;
+	font-size:13px;
+	font-family:"microsoft yahei";
+	color:#444;
+	background:#eee;
+	border:1px solid #ddd;
+	text-decoration:none;
+}
+.middle_title span a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.middle_cnt h3{
+	padding-left:30px;
+}
+.middle_cnt table{
+	width:890px;
+	border-collapse:collapse;
+	margin-left:30px;
+	font-family:"microsoft yahei";
+	font-size:15px;
+	border:1px solid #999;
+}
+.middle_cnt table tr td{
+	height:32px;
+	border:1px solid #999;
+}
+.middle_cnt table tr td a{
+	display:inline-block;
+	height:28px;
+	border-bottom:#ae4141;
+	line-height:28px;
+	text-decoration:underline;
+	color:#ae4141;
+}
+.middle_cnt table tr td a:hover{
+	color:#F00;
+	text-decoration:;underline
+}
+.middle_cnt table tr td span{
+	color:#f00;
+}
+.middle_cnt table tr #add{
+	background: url(images_2/html5.png) right no-repeat;
+}
+.right{
+	float:right;
+	margin-left:30px;
+	width:198px;
+	height:1000px;
+	border:1px solid #eee;
+}
+.right_tools{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.tools_list{
+	width:175px;
+	height:auto;
+	margin:0 auto;
+}
+.right_tools p{
+	margin:0px;
+	padding:0px;
+}
+.tools_1{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	margin-top:20px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #093 , #063); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #093, #063); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #093, #063); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #093 , #063); /* 标准的语法 */
+}
+.tools_2{
+	margin: auto;
+	width:175px;
+	height:100px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #3cc , #39c); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #3cc, #39c); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #3cc, #39c); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #3cc , #39c); /* 标准的语法 */
+}
+.tools_3{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #939 , #909); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #939, #909); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #939, #909); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #939, #909); /* 标准的语法 */
+}
+.right_link{
+	margin-top:20px;
+	text-align:center;
+}
+.right_link p{
+	margin:0px;
+	padding:0px;
+	width:198px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	font-weight:700;
+	background:#eee;
+}
+.line{
+	width:1380px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.footer{
+	margin:0 auto;
+	width:1380px;
+	height:60px;
+	line-height:60px;
+	font-size:14px;
+	text-align:center;
+	background:#eee;
+	color:#000;
+}
+.copyright{
+	margin:0 auto;
+	margin-top:20px;
+	text-align:center;
+	font-size:12px;
+	color:#999;
+}
+#scrollup{
+    position:fixed;
+    bottom:65px;
+    right:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    display: none;
+    font-size:40px;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    background: #777;
+    z-index:99;
+    opacity:0.8;
+}
+#scrollup:hover{
+    opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="title"><a href="../首页.html">玩转JavaScript</a></div>
+</div>
+<div class="nav">
+	<ul>
+		<li><a href="html标签.html" id="nav_H5">HTML5</a></li>
+		<li><a href="css3简介.html">CSS3</a></li>
+		<li><a href="JavaScript简介.html">JavaScript</a></li>
+		<li><a href="jquery简介.html">jQuery</a></li>
+		<li><a href="Web service.html">Web Services</a></li>
+		<li><a href="Web Building.html">Web Building</a></li>
+	</ul>
+</div>
+<div class="content">
+	<div class="left">
+		<div class="left_top">课程表</div>
+		<div class="left_list1">
+			<h3>参考手册</h3>
+			<ul>
+				<li><a href="html标签.html">HTML5标签</a></li>
+				<li><a href="#" id="list1_H5">HTML5属性</a></li>
+				<li><a href="html5事件.html">HTML5事件</a></li>
+				<li><a href="html5表单.html">HTML5表单</a></li>
+				<li><a href="html5视频音频.html">HTML5视频/音频</a></li>
+				<li><a href="html画布.html">HTML5画布</a></li>
+			</ul>
+		</div>
+		<div class="left_list2">
+			<h3>HTML5标签</h3>
+			<ul>
+				<li><a href="#">accesskey</a></li>
+				<li><a href="#">class</a></li>
+				<li><a href="#">contenteditable</a></li>
+				<li><a href="#">contextmenu</a></li>
+				<li><a href="#">data-youvalue</a></li>
+				<li><a href="#">dir</a></li>
+				<li><a href="#">draggable</a></li>
+				<li><a href="#">hidden</a></li>
+				<li><a href="#">id</a></li>
+				<li><a href="#">item</a></li>
+				<li><a href="#">itemprop</a></li>
+				<li><a href="#">lang</a></li>
+				<li><a href="#">spellcheck</a></li>
+				<li><a href="#">style</a></li>
+				<li><a href="#">subject</a></li>
+				<li><a href="#">tabindex</a></li>
+				<li><a href="#">title</a></li>
+			</ul>
+		</div>
+		<div class="left_list3">
+			<h3>建站手册</h3>
+			<ul>
+				<li><a href="#">网站构建</a></li>
+				<li><a href="#">万维网联盟(W3C)</a></li>
+				<li><a href="#">浏览器信息</a></li>
+				<li><a href="#">网站品质</a></li>
+				<li><a href="#">语义网</a></li>
+				<li><a href="#">网站主机</a></li>
+			</ul>
+			<p><a href="#">关于玩转JavaScript</a></p>
+			<p><a href="#">帮助JavaScript</a></p>
+		</div>
+	</div>
+	<div class="middle">
+		<div class="middle_title">
+			<h2>HTML5属性</h2>
+			<span><a href="html标签.html">&lt;上一节</a></span><span><a href="html5事件.html">下一节&gt;</a></span>
+			<hr></hr>
+			<div class="title_idx">
+				<p>HTML属性赋予元素意义和语境</p>
+				<p>下面的全局属性可用于任何HTML元素</p>
+			</div>
+			<hr></hr>
+		</div>
+		<div class="middle_cnt">
+			<h3>按字母顺序排列</h3>
+			<p><span>New</span>：HTML5的新标签。</p>
+			<table>
+				<tr>
+					<th>属性</th><th>值</th><th>描述</th>
+				</tr>
+				<tr>
+					<td><a href="#">accesskey</a></td><td>character</td><td>规定访问元素的键盘快捷键。</td>
+				</tr>
+				<tr>
+					<td><a href="#">class</a></td><td>classname</td><td>规定元素的类名(用于规定样式表中的类)。</td>
+				</tr>
+				<tr>
+					<td id="add"><a href="#">contenteditable</a></td><td>true/false</td><td>规定是否允许用户编辑内容。</td>
+				</tr>
+				<tr>
+					<td id="add"><a href="#">contextmenu</a></td><td>menu_id</td><td>规定元素的上下文菜单。</td>
+				</tr>
+				<tr>
+					<td id="add"><a href="#">data-yourvalue</a></td><td>value</td><td>创作者定义的属性。</br>HTML文档的创作者可以定义他们自己的属性。<br>必须以"data-"开头。</td>
+				</tr>
+				<tr>
+					<td><a href="#">dir</a></td><td>ltr/rtl</td><td>规定元素中内容的文本方向。</td>
+				</tr>
+				<tr>
+					<td id="add"><a href="#">draggable</a></td><td>true/false/auto</td><td>规定是否允许用户拖动元素。</td>
+				</tr>
+				<tr>
+					<td id="add"><a href="#">hidden</a></td><td>hidden</td><td>规定该元素是无关的，被隐藏的元素不会显示。</td>
+				</tr>
+				<tr>
+					<td id="add"><a href="#">id</a></td><td>id</td><td>规定元素的唯一ID。</td>
+				</tr>
+				<tr>
+					<td id="add"><a href="#">item</a></td><td>empty/url</td><td>用于组合元素。</td>
+				</tr>
+				<tr>
+					<td id="add"><a href="#">itemprop</a></td><td>url/group/value</td><td>用于组合项目。</td>
+				</tr>
+				<tr>
+					<td><a href="#">lang</a></td><td>language_code</td><td>规定元素中内容的语言代码。<span>语言代码参考手册。</span></td>
+				</tr>
+				<tr>
+					<td id="add"><a href="#">spellcheck</a></td><td>true/false</td><td>规定是否必须对元素进行拼写或语法检查。</td>
+				</tr>
+				<tr>
+					<td><a href="#">style</a></td><td>style_defintion</td><td>规定元素的行内元素。</td>
+				</tr>
+				<tr>
+					<td id="add"><a href="#">subject</a></td><td>id</td><td>规定元素对应的项目。</td>
+				</tr>
+				<tr>
+					<td><a href="#">tabindex</a></td><td>number</td><td>规定元素的tab键控制次序。</td>
+				</tr>
+				<tr>
+					<td><a href="#">title</a></td><td>text</td><td>规定有关元素的额外信息。</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="right">
+		<div class="right_tools"><p>工具箱</p></div>
+		<div class="tools_list">
+			<div class="tools_1"></div>
+			<div class="tools_2"></div>
+			<div class="tools_3"></div>
+		</div>
+		<div class="right_link">
+			<p>赞助商链接</p>
+			<div></div>
+		</div>
+	</div>
+</div>
+<div class="line"><hr></hr></div>
+<div class="footer">
+	<p>玩转JavaScript提供的内容仅供学习和参考，不保证内容的正确性。通过使用本网站随之而来的风险与本站无关。</p>
+</div>
+<div class="copyright">
+	<p>Copyright © 2016-2019 Play with javascript. All Rights Reserved.</p>
+	<p>玩转JavaScript 版权所有</p>
+</div>
+<a id="scrollup" href="#top"><span style="font-size:18px; line-height:50px;">顶</span></a>
+</body>
+</html>

@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+body, header,  warp, social, .nav_logo, con_1,con_2, con_3, con_4, .weixin, .sina, .footer, .copyright, a {
+	margin:0px;
+	padding:0px;
+	width:100%;
+	height:100%;
+}
+.header{
+	position:relative;
+	top:0;
+	left:0;
+	margin-bottom:5px;
+	width:100%;
+	height:76px;
+	font-family:"微软雅黑";
+	font-size:22px;
+	line-height:76px;
+	color:#06F;
+	background-color:#eee;
+	box-shadow:0 0 5px #666;
+}
+.wrap{
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+}
+.clearfix{
+	zoom:1;
+}
+.social{
+	float:right;
+	position:relative;
+}
+.header .nav_logo{
+	display:inline-block;
+	width:180px;
+	height:76px;
+	color:#06f;
+	text-decoration:none;
+}
+.header .nav_logo a, .header .nav_logo a:visited{
+	color:#06f;
+	text-decoration:none;
+}
+.header .social a, .header .social a:visited{
+	display:inline-block;
+	width:28px;
+	height:76px;
+	text-decoration:none;
+}
+.header .social a:hover{
+	color:#666;
+	text-decoration:none;
+}
+.header .sina{
+	margin-left:20px;
+}
+.weixin_code{
+	position:absolute;
+	right:20px;
+	top:60px;
+	width:140px;
+	opacity:0;
+	filter:Alpha(opacity=0);
+	transition: opacity 1s;
+}
+@font-face {
+  font-family: 'iconfont_weixin';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_x420jkfr08.eot');
+  src: url('//at.alicdn.com/t/font_628978_x420jkfr08.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_x420jkfr08.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_x420jkfr08.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_x420jkfr08.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont_sina';  /* project id 628978 */
+  src: url('//at.alicdn.com/t/font_628978_qzmtsfvq5m.eot');
+  src: url('//at.alicdn.com/t/font_628978_qzmtsfvq5m.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_628978_qzmtsfvq5m.woff') format('woff'),
+  url('//at.alicdn.com/t/font_628978_qzmtsfvq5m.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_628978_qzmtsfvq5m.svg#iconfont') format('svg');
+}
+.weixin{
+    font-family:"iconfont_weixin" !important;
+    font-size:25px;
+	font-style:normal;
+	color:#999;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-s moothing: grayscale;
+}
+.sina{
+    font-family:"iconfont_sina" !important;
+    font-size:25px;
+	font-style:normal;
+	color:#999;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+img{
+	height:auto;
+	width:auto/9;
+	width:100%;
+}
+.footer{
+	width:1000px;
+	height:100px;
+	margin:0 auto;
+	margin-top:50px;
+	text-align:center;
+	font-family:"Microsoft YaHei";
+	font-weight:300;
+	font-size:12px;
+	color:#a9a9a9;
+}
+.footer .copyright{
+	font-family:"SimSun";
+	font-weight:300;
+}

@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS3边框</title>
+<link rel="shortcut icon" href="../icon_font/logo.ico">
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script language="javascript">
+$(function(){
+	$(".title").hover(function(){
+		$(this).css("border-bottom","5px solid #ae4141");
+	},function(){
+		$(this).css("border-bottom","none");
+	});
+})
+</script>
+<script type="text/javascript">
+         window.onscroll= function(){
+                //变量t是滚动条滚动时，距离顶部的距离
+                var t = document.documentElement.scrollTop||document.body.scrollTop;
+                var scrollup = document.getElementById('scrollup');
+                //当滚动到距离顶部200px时，返回顶部的锚点显示
+                if(t>=200){
+                    scrollup.style.display="block";
+                }else{          //恢复正常
+                    scrollup.style.display="none";
+                }
+            }
+</script>
+<script language="javascript">
+$(function(){
+	$("#tb_sup tr:nth-child(2n+1)").css("background","#eee");
+	$("#tb_sup tr:first-child").css({"background":"#3F3F3F","color":"#fff","height":"35px"});
+	$("#tb_new tr:nth-child(2n+1)").css("background","#eee");
+	$("#tb_new tr:first-child").css({"background":"#3F3F3F","color":"#fff","height":"35px"});
+})
+</script>
+<style type="text/css">
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: rgb(253,252,248);
+}
+.header{
+	margin: 0 auto;
+	width: 1380px;
+	height: 100px;
+	font-family:"microsoft yahei";
+	text-align:center;
+	border:1px solid #eee;
+}
+.header .title{
+	margin-left:20px;
+	width:260px;
+	height:90px;
+	font-size:37px;
+	color:#ae4141;
+}
+.header .title a{
+	line-height:90px;
+	color:#ae4141;
+	text-decoration:none;
+}
+.header .title a:hover{
+	text-decoration: none;
+}
+.nav{
+	margin:0 auto;
+	width:1380px;
+	height:50px;
+}
+.nav ul{
+	margin:0px;
+	padding:0px;
+}
+.nav ul li{
+	list-style:none;
+}
+.nav ul li a{
+	display:inline-block;
+	float:left;
+	border:0px;
+	width:230px;
+	height:50px;
+	font-family:"microsoft yahei";
+	font-size:15px;
+	background:#eee;
+	color:#999;
+	text-align:center;
+	line-height:50px;
+	text-decoration:none;
+}
+.nav ul li a:hover{
+	text-decoration:none;
+	color:#fff;
+	background:#333;
+}
+.nav ul li #nav_H5{
+	color:#fff;
+	background:#333;
+}
+.content{
+	margin-top:20px;
+	margin:0 auto;
+	width:1380px;
+	height:3135px;
+}
+.left{
+	float:left;
+	width:228px;
+	height:3135px;
+	font-family:"microsoft yahei";
+	border:1px solid #eee;
+}
+.left_top{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.left_list1{
+	border-bottom:1px solid #eee;
+}
+.left_list1 h3{
+	margin-left:20px;
+}
+.left_list1 ul{
+	padding:0px;
+	margin:0px;
+}	
+.left_list1 ul li{
+	list-style:none;
+}
+.left_list1 ul li a{
+	width:178px;
+	display:inline-block;
+	padding-left:50px;
+	line-height:30px;
+	font-size:14px;
+	color:#666;
+	text-decoration:none;
+}
+.left_list1 ul li a:hover{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list1 #list1_H5{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list2 h3{
+	margin-left:15px;
+}
+.left_list2 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list2 ul li{
+	list-style:none;
+}
+.left_list2 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	font-size:13px;
+	line-height:30px;
+	color:#777;
+	text-decoration:none;
+}
+.left_list2 ul li a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.left_list3 h3{
+	margin-left:15px;
+}
+.left_list3{
+	border-top:1px solid #eee;
+}
+.left_list3 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list3 ul li{
+	list-style:none;
+}
+.left_list3 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	line-height:30px;
+	font-size:13px;
+	color:#000;
+	text-decoration:none;
+}
+.left_list3 ul li a:hover{
+	color:#fff;
+	background:#999;
+	text-decoration:none;
+}
+.left_list3 p{
+	font-weight:700;
+	text-align:center;
+	line-height:30px;
+	font-size:14px;
+	color:#0479A7;
+}
+.left_list3 p a{
+	color:#0479A7;
+	text-decoration:none;
+}
+.middle{
+	padding-left:30px;
+	float:left;
+	width:890px;
+	height:auto;
+}
+.middle table{
+	width:890px;
+	text-align:center;
+	border:1px solid #999;
+	border-collapse:collapse;
+}
+.arg{
+	padding:20px;
+	background:#eee;
+	width:840px;
+	border:1px dotted #785;
+}
+.middle table tr{
+	height:80px;
+	font-size:13px;
+	line-height:30px;
+	text-indent:1em;
+}
+.middle table tr img{
+	display:block;
+	margin:0 auto;
+}
+.middle table tr td{
+	border:1px solid #999;
+}
+.middle table a{
+	color:#ae4141;
+	text-decoration:underline;
+}
+.title_idx p{
+	padding-left:0px;
+	line-height:25px;
+	font-size:13px;
+}
+.middle p span{
+	color:#00C;
+	font-weight:700;
+}
+.middle_title hr{
+	margin-top:30px;
+}
+.middle_title span a{
+	display:inline-block;
+	margin-right:25px;
+	height:30px;
+	width:100px;
+	text-align:center;
+	line-height:30px;
+	font-size:13px;
+	font-family:"microsoft yahei";
+	color:#444;
+	background:#eee;
+	border:1px solid #ddd;
+	text-decoration:none;
+}
+.middle_title span a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.middle_modular ul li{
+	line-height:30px;
+}
+.right{
+	float:right;
+	margin-left:30px;
+	width:198px;
+	height:3135px;
+	border:1px solid #eee;
+}
+.right_tools{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.tools_list{
+	width:175px;
+	height:auto;
+	margin:0 auto;
+}
+.right_tools p{
+	margin:0px;
+	padding:0px;
+}
+.tools_1{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	margin-top:20px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #093 , #063); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #093, #063); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #093, #063); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #093 , #063); /* 标准的语法 */
+}
+.tools_2{
+	margin: auto;
+	width:175px;
+	height:100px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #3cc , #39c); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #3cc, #39c); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #3cc, #39c); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #3cc , #39c); /* 标准的语法 */
+}
+.tools_3{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #939 , #909); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #939, #909); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #939, #909); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #939, #909); /* 标准的语法 */
+}
+.right_link{
+	margin-top:20px;
+	text-align:center;
+}
+.right_link p{
+	margin:0px;
+	padding:0px;
+	width:198px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	font-weight:700;
+	background:#eee;
+}
+.line{
+	width:1380px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.footer{
+	margin:0 auto;
+	width:1380px;
+	height:60px;
+	line-height:60px;
+	font-size:14px;
+	text-align:center;
+	background:#eee;
+	color:#000;
+}
+.copyright{
+	margin:0 auto;
+	height:60px;
+	margin-top:20px;
+	text-align:center;
+	font-size:12px;
+	color:#999;
+}
+#scrollup{
+    position:fixed;
+    bottom:65px;
+    right:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    display: none;
+    font-size:40px;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    background: #777;
+    z-index:99;
+    opacity:0.8;
+}
+#scrollup:hover{
+    opacity:0.7;
+}
+.clearfix{
+	zoom:1;/*兼容IE*/
+}
+.clearfix:before{
+	display:inline-block;
+	content:"";
+	height:0px;
+	line-height:0px;
+	visibility:hidden;
+	clear:both;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+	<div class="title"><a href="../首页.html">玩转JavaScript</a></div>
+</div>
+<div class="nav">
+	<ul>
+		<li><a href="html标签.html">HTML5</a></li>
+		<li><a href="css3简介.html" id="nav_H5">CSS3</a></li>
+		<li><a href="JavaScript简介.html">JavaScript</a></li>
+		<li><a href="jquery简介.html">jQuery</a></li>
+		<li><a href="Web service.html">Web Services</a></li>
+		<li><a href="Web Building.html">Web Building</a></li>
+	</ul>
+</div>
+<div class="content clearfix">
+	<div class="left">
+		<div class="left_top">课程表</div>
+		<div class="left_list1">
+			<h3>参考手册</h3>
+			<ul>
+				<li><a href="css3简介.html">CSS3简介</a></li>
+				<li><a href="#" id="list1_H5">CSS3边框</a></li>
+				<li><a href="CSS3背景.html">CSS3背景</a></li>
+				<li><a href="CSS3过渡.html">CSS3过渡</a></li>
+				<li><a href="CSS3动画.html">CSS3动画</a></li>
+				<li><a href="CSS3多列.html">CSS3多列</a></li>
+			</ul>
+		</div>
+		<div class="left_list2">
+			<h3>CSS3边框</h3>
+			<ul>
+				<li><a href="#">CSS3边框</a></li>
+				<li><a href="#">浏览器支持</a></li>
+				<li><a href="#">CSS3圆角边框</a></li>
+				<li><a href="#">CSS3边框阴影</a></li>
+				<li><a href="#">CSS3边框图片</a></li>
+				<li><a href="#">新的边框属性</a></li>
+			</ul>
+		</div>
+		<div class="left_list3">
+			<h3>建站手册</h3>
+			<ul>
+				<li><a href="#">网站构建</a></li>
+				<li><a href="#">万维网联盟(W3C)</a></li>
+				<li><a href="#">浏览器信息</a></li>
+				<li><a href="#">网站品质</a></li>
+				<li><a href="#">语义网</a></li>
+				<li><a href="#">网站主机</a></li>
+			</ul>
+			<p><a href="#">关于玩转JavaScript</a></p>
+			<p><a href="#">帮助JavaScript</a></p>
+		</div>
+	</div>
+	<div class="middle">
+		<div class="middle_title">
+			<h2>CSS3边框</h2>
+			<span><a href="css3简介.html">&lt;上一节</a></span><span><a href="CSS3背景.html">下一节&gt;</a></span>
+			<hr></hr>
+		</div>
+		<div class="CSS3_bor">
+			<h2>CSS3边框</h2>
+			<p>通过CSS3，您能够创建圆角边框，向矩形添加阴影，使用图片来绘制边框-并且不需要设计软件，比如：photoshop。</p>
+			<p>在本章中，您将学到以下边框属性：</p>
+			<ul>
+				<li>border-radius</li>
+				<li>box shadow</li>
+				<li>border-image</li>
+			</ul>
+			<hr></hr>
+		</div>
+		<div class="middle_sup">
+			<h2>浏览器支持</h2>
+		</div>
+		<table id="tb_sup">
+			<tr>
+				<th>属性</th><th colspan="5">浏览器支持</th>
+			</tr>
+			<tr>
+				<td>border-radius</td><td><img src="images_2/compatible_chrome.png"></td><td><img src="images_2/compatible_ie.png"></td><td><img src="images_2/compatible_firefox.png"></td><td><img src="images_2/compatible_opera.png"></td><td><img src="images_2/compatible_safari.png"></td>
+			</tr>
+			<tr>
+				<td>box-shadow</td><td><img src="images_2/compatible_chrome.png"></td><td><img src="images_2/compatible_ie.png"></td><td><img src="images_2/compatible_firefox.png"></td><td><img src="images_2/compatible_opera.png"></td><td><img src="images_2/compatible_safari.png"></td>
+			</tr>
+			<tr>
+				<td>border-image</td><td><img src="images_2/incompatible_ie.png"></td><td><img src="images_2/compatible_ie.png"></td><td><img src="images_2/compatible_firefox.png"></td><td><img src="images_2/compatible_opera.png"></td><td><img src="images_2/compatible_safari.png"></td>
+			</tr>
+		</table>
+		<p>Internet Explorer 9+ 支持 border-radius 和 box-shadow 属性。</p>
+		<p>Firefox、Chrome 以及 Safari 支持所有新的边框属性。</p>
+		<p><b>注释：</b>对于 border-image，Safari 5 以及更老的版本需要前缀 -webkit-。</p>
+		<p>Opera 支持 border-radius 和 box-shadow 属性，但是对于 border-image 需要前缀 -o-。</p>
+		<br>
+		<hr></hr>
+		<div class="middle_radius">
+			<h2>CSS3圆角边框</h2>
+			<p>在CSS2添加圆角矩形需要技巧。我们必须为每个圆角使用不同的图片。</p>
+			<p>在 CSS3 中，创建圆角是非常容易的。</p>
+			<p>在 CSS3 中，border-radius 属性用于创建圆角：</p>
+			<img src="images_2/rounded_corners.gif">
+			<h3>实例：</h3>
+			<p>向div元素添加圆角：</p>
+			<div class="arg">
+				<p>div</p>
+				<p>{</p>
+				<p>border: 2px solid;</p>
+				<p>border-radius: 25px;</p>
+				<p>-moz-border-radius: 25px;/*Old Firefox*/</p>
+				<p>}</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_shadow">
+			<h2>CSS3边框阴影</h2>
+			<p>在CSS3中，box-shadow用于向方框添加阴影：</p>
+			<img src="images_2/box_shadow.gif">
+			<h3>实例：</h3>
+			<p>向div元素添加方框阴影：</p>
+			<div class="arg">
+				<p>div</p>
+				<p>{</p>
+				<p>box-shadow:10px 10px 5px #888;</p>
+				<p>}</p>
+			</div>
+		</div>
+		<div class="middle_image">
+			<h2>CSS3边框图片</h2>
+			<p>通过CSS3的border-image属性，您可以使用图片来创建边框：</p>
+			<img src="images_2/border_image.gif">
+			<p>用于创建上面的边框的原始图片：</p>
+			<img src="images_2/border.png">
+			<h3>实例：</h3>
+			<p>使用图片创建div元素的边框：</p>
+			<div class="arg">
+				<p>div</p>
+				<p>{</p>
+				<p>border-image:url(border.png) 30 30 round;</p>
+				<p>-moz-border-image:url(border.png) 30 30 round;</p>
+				<p>-webkit-border-image:url(border.png) 30 30 round;</p>
+				<p>}</p>
+			</div>
+			<br><hr></hr>
+		</div>
+		<div class="middle_new">
+			<h2>新的边框属性</h2>
+			<table id="tb_new">
+				<tr>
+					<th>属性</th><th>描述</th><th>CSS</th>
+				</tr>
+				<tr>
+					<td><a href="#">border-image</a></td><td>设置所有border-image-*属性的简写属性。</td><td>3</td>
+				</tr>
+				<tr>
+					<td><a href="#">border-radius</a></td><td>设置所有四个 border-*-radius 属性的简写属性。</td><td>3</td>
+				</tr>
+				<tr>
+					<td><a href="#">box-shadow</a></td><td>向方框添加一个或多个阴影。</td><td>3</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="right">
+		<div class="right_tools"><p>工具箱</p></div>
+		<div class="tools_list">
+			<div class="tools_1"></div>
+			<div class="tools_2"></div>
+			<div class="tools_3"></div>
+		</div>
+		<div class="right_link">
+			<p>赞助商链接</p>
+			<div></div>
+		</div>
+	</div>
+</div>
+<div class="line"><hr></hr></div>
+<div class="footer">
+	<p>玩转JavaScript提供的内容仅供学习和参考，不保证内容的正确性。通过使用本网站随之而来的风险与本站无关。</p>
+</div>
+<div class="copyright">
+	<p>Copyright © 2016-2019 Play with javascript. All Rights Reserved.</p>
+	<p>玩转JavaScript 版权所有</p>
+</div>
+<a id="scrollup" href="#top"><span style="font-size:18px; line-height:50px;">顶</span></a>
+</body>
+</html>

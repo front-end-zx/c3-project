@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>玩转JavaScript</title>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+	$("#info1").mouseover(function(){
+		$("#info_item1").css("display","block");
+	});
+	$("#info1").mouseout(function(){
+	$("#info_item1").css("display","none");
+	});
+})
+$(function(){
+	$("#info2").mouseover(function(){
+		$("#info_item2").css("display","block");
+	});
+	$("#info2").mouseout(function(){
+	$("#info_item2").css("display","none");
+	});
+})
+$(function(){
+	$("#info3").mouseover(function(){
+		$("#info_item3").css("display","block");
+	});
+	$("#info3").mouseout(function(){
+	$("#info_item3").css("display","none");
+	});
+})
+$(function(){
+	$(".game_head").hover(function(){
+		$(".game_line").css("width","120px");
+	},function(){
+		$(".game_line").css("width","60px");
+	});
+})
+	$(function(){
+	    $(".LifeValue").hover(function(){
+	        $(this).css({"animation":"top .3s linear","animation-fill-mode":"forwards","cursor":"pointer"});
+		},function(){
+	        $(this).css({"animation":"bottom .3s linear","animation-fill-mode":"forwards","cursor":"pointer"});
+		});
+	})
+$(function(){
+    $(".gold").hover(function(){
+        $(this).css({"animation":"top .3s linear","animation-fill-mode":"forwards","cursor":"pointer"});
+    },function(){
+        $(this).css({"animation":"bottom .3s linear","animation-fill-mode":"forwards","cursor":"pointer"});
+    });
+})
+$(function(){
+    $(".score").hover(function(){
+        $(this).css({"animation":"top .3s linear","animation-fill-mode":"forwards","cursor":"pointer"});
+    },function(){
+        $(this).css({"animation":"bottom .3s linear","animation-fill-mode":"forwards","cursor":"pointer"});
+    });
+})
+</script>
+<script type="text/javascript">
+         window.onscroll= function(){
+                //变量t是滚动条滚动时，距离顶部的距离
+                var t = document.documentElement.scrollTop||document.body.scrollTop;
+                var scrollup = document.getElementById('scrollup');
+                //当滚动到距离顶部200px时，返回顶部的锚点显示
+                if(t>=200){
+                    scrollup.style.display="block";
+                }else{          //恢复正常
+                    scrollup.style.display="none";
+                }
+            }
+</script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="shortcut icon" href="icon_font/logo.ico">
+</head>
+
+<body>
+<div class="header">
+	<div class="header_left">玩转JavaScript</div>
+	<div class="header_right">
+		<ul>
+			<li><a href="#" class="index">首页</a></li>
+			<li><a href="#data">游戏资料</a></li>
+			<li><a href="#store">游戏道具</a></li>
+			<li><a href="#act">游戏活动</a></li>
+			<li><a href="#service">联系客服</a></li>
+		</ul>
+	</div>
+</div>
+<div class="banner">
+	<div class="banner_cnt">
+		<p>Hello! I Am</p>
+		<p>玩转 JavaScript</p>
+		<p style="color:#F93;">一个基于JavaScript的游戏化学习平台</p>
+		<span><a href="学习中心.html">学习中心</a></span><span><a href="社区.html">社区中心</a></span>
+	</div>
+</div>
+<div class="data" id="data">
+	<div class="data_cnt">
+		<div class="iconfont_data">&#xe661;<span>游戏资料</span></div>
+		<div class="info">
+			<div class="info_item" id="info1">
+				<img src="images/icon_design.png">
+				<p>游戏简介</p>
+				<div id="info_item1">玩转JS”是一个网页游戏教学平台，在Js 学习中创设一个寓教于乐的趣味性学习环境，利用游戏的娱乐性与交互性，提供趣味化学习平台，促进用户之间的沟通与交流，激发学习动机与学习热情。</div>
+			</div>
+			<div class="info_item" id="info2">
+				<img src="images/icon_development.png">
+				<p>游戏形式</p>
+				<div id="info_item2">该游戏化学习平台主要以填补代码的形式进行，每个关卡都设置3-5个空白处，玩家需要根据上下文内容规范填写。</div>
+			</div>
+			<div class="info_item clearfix" id="info3">
+				<img src="images/icon_marketing.png">
+				<p>进入游戏</p>
+				<div id="info_item3"><a href="#">进入游戏</a></div>
+			</div>
+		</div>
+	</div>
+	<div class="data_game">
+		<div class="game_head">游戏数据</div>
+		<div class="game_line"></div>
+		<div class="game_fact">
+			<div id="num"><p class="game_num">3</p><p>游戏难度</p></div>
+			<div id="num"><p class="game_num">18</p><p>游戏关卡</p></div>
+			<div id="num"><p class="game_num">72</p><p>游戏实例</p></div>
+			<div id="num"><p class="game_num">36</p><p>视频教程</p></div>
+		</div>
+	</div>
+</div>
+<div class="store" id="store">
+	<div class="store_head"><font class="iconfont_store">&#xe67c;</font><span>游戏道具</span></div>
+	<div class="store_tools">
+		<div class="tool_1">
+			<div class="tool_1_top"></div>
+			<div class="LifeValue">
+				<h3>生命值（life value）</h3>
+				<p>每个关卡仅可使用三次提示机会，每用一次机会消耗一格生命值。</p>
+				<p>生命值可以通过商城购买。</p>
+				<p class="f_posi">玩转JavaScript</p>
+			</div>
+		</div>
+		<div class="tool_2">
+			<div class="tool_2_top"></div>
+			<div class="gold">
+				<h3>金币（gold）</h3>
+				<p>金币可以用来购买生命值，可以通过充值来购买金币。</p>
+				<p>金币可以在社区打赏用户帖子。</p>
+				<p class="f_posi">玩转JavaScript</p>
+			</div>
+		</div>
+		<div class="tool_3">
+			<div class="tool_3_top"></div>
+			<div class="score">
+				<h3>分数（score）</h3>
+				<p>游戏通关可以获得相应的分数。</p>
+				<p>积分可以参加积分排行榜，前三名可以获得相应的奖励。</p>
+				<p class="f_posi">玩转JavaScript</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="act" id="act">
+	<img src="images/活动.jpg">
+</div>
+<div class="service" id="service">
+	<div class="ser_top">
+		<h1>CONTACT US</h1>
+		<div class="ser_line"></div>
+	</div>
+	<div class="ser_cnt">
+        <div class="ser_left">
+            <div class="info">
+                <div class="phone_left"><img src="images/电话.png"></div>
+                <div class="phone">
+                    <span>Call Us</span></br>
+                    <span>+1234567890</span>
+                </div>
+            </div>
+            <div class="info">
+                <div class="email_left"><img src="images/邮箱.png"></div>
+                <div class="email">
+                    <span>Email Us</span>
+                    <span>info@mywebsite.com</span>
+                </div>
+            </div>
+            <div class="info">
+                <div class="address_left"><img src="images/地址.png"></div>
+                <div class="address">
+                    <span>Office Address</span>
+                    <span>历下区文化东路88号</span>
+                </div>
+            </div>
+        </div>
+        <div class="ser_right">
+            <div class="form_1">
+                <div class="form_name">
+                    <input type="text" placeholder="Your Name">
+                </div>
+                <div class="form_email">
+                    <input type="text" placeholder="Email">
+                </div>
+            </div>
+			<div class="form2">
+				<div class="form_subject">
+					<input type="text" placeholder="Subject">
+				</div>
+				<div class="form_company">
+					<input type="text" placeholder="Company">
+				</div>
+			</div>
+			<div class="form3">
+				<div class="form_textarea">
+					<textarea rows="10" cols="64" placeholder="Your Message"></textarea>
+				</div>
+			</div>
+			<div class="form4">
+				<div class="form_submit">
+					<input type="submit" value="SUBMIT">
+				</div>
+			</div>
+        </div>
+	</div>
+</div>
+<div class="footer">
+	<div class="cnt">
+		<div class="cnt_left">
+			<img src="images/logo拷贝.png">
+		</div>
+		<div class="cnt_right">
+			<p>
+				<span><a href="#">互动娱乐</a></span>
+				<span><a href="#">服务条款</a></span>
+				<span><a href="#">隐私政策</a></span>
+				<span><a href="#">游戏招聘</a></span>
+				<span><a href="#">游戏客服</a></span>
+				<span><a href="#">游戏地图</a></span>
+				<span><a href="#">商务合作</a></span>
+				<span><a href="#">网站导航</a></span>
+			</p>
+			<p style="text-indent:1em;">玩转JavaScript版权所有</p>
+			<p style="text-indent:1em;">COPYRIGHT © 201-2020&nbsp;JS.ALLRIGHTS&nbsp;RESERVED.</p>
+			<p style="text-indent:1em;">COPYRIGHT © Smilegate Entertainment. All rights reserved.</p>
+			<p style="text-indent:1em;">鲁文网[2017]6138-1456号&nbsp;新出网证(鲁)字010号.</p>
+			<p style="text-indent:1em;">文网测字【2008】006号|批准文号：新出音[2008]714号</p>
+		</div>
+	</div>
+</div>
+
+<a id="scrollup" href="#top"><span style="font-size:18px; line-height:50px;">顶</span></a>
+</body>
+</html>

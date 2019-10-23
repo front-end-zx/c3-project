@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>html5视频和音频</title>
+<link rel="shortcut icon" href="../icon_font/logo.ico">
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script language="javascript">
+$(function(){
+	$(".title").hover(function(){
+		$(this).css("border-bottom","5px solid #ae4141");
+	},function(){
+		$(this).css("border-bottom","none");
+	});
+})
+</script>
+<script language="javascript">
+$(function(){
+	$("#tb_method tr:nth-child(2n+1)").css("background","#eee");
+	$("#tb_method tr:first-child").css({"background":"#3F3F3F","color":"#fff","height":"35px"});
+	$("#tb_attr tr:nth-child(2n+1)").css("background","#eee");
+	$("#tb_attr tr:first-child").css({"background":"#3F3F3F","color":"#fff","height":"35px"});
+	$("#tb_event tr:nth-child(2n+1)").css("background","#eee");
+	$("#tb_event tr:first-child").css({"background":"#3F3F3F","color":"#fff","height":"35px"});
+})
+</script>
+<script type="text/javascript">
+         window.onscroll= function(){
+                //变量t是滚动条滚动时，距离顶部的距离
+                var t = document.documentElement.scrollTop||document.body.scrollTop;
+                var scrollup = document.getElementById('scrollup');
+                //当滚动到距离顶部200px时，返回顶部的锚点显示
+                if(t>=200){
+                    scrollup.style.display="block";
+                }else{          //恢复正常
+                    scrollup.style.display="none";
+                }
+            }
+</script>
+
+<style type="text/css">
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: rgb(253,252,248);
+}
+.header{
+	margin: 0 auto;
+	width: 1380px;
+	height: 100px;
+	font-family:"microsoft yahei";
+	text-align:center;
+	border:1px solid #eee;
+}
+.header .title{
+	margin-left:20px;
+	width:260px;
+	height:90px;
+	font-size:37px;
+	color:#ae4141;
+}
+.header .title a{
+	line-height:90px;
+	color:#ae4141;
+	text-decoration:none;
+}
+.header .title a:hover{
+	text-decoration: none;
+}
+.nav{
+	margin:0 auto;
+	width:1380px;
+	height:50px;
+}
+.nav ul{
+	margin:0px;
+	padding:0px;
+}
+.nav ul li{
+	list-style:none;
+}
+.nav ul li a{
+	display:inline-block;
+	float:left;
+	border:0px;
+	width:230px;
+	height:50px;
+	font-family:"microsoft yahei";
+	font-size:15px;
+	background:#eee;
+	color:#999;
+	text-align:center;
+	line-height:50px;
+	text-decoration:none;
+}
+.nav ul li a:hover{
+	text-decoration:none;
+	color:#fff;
+	background:#333;
+}
+.nav ul li #nav_H5{
+	color:#fff;
+	background:#333;
+}
+.content{
+	margin-top:20px;
+	margin:0 auto;
+	width:1380px;
+	height:2470px;
+}
+.left{
+	float:left;
+	width:228px;
+	height:2470px;
+	font-family:"microsoft yahei";
+	border:1px solid #eee;
+}
+.left_top{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.left_list1{
+	border-bottom:1px solid #eee;
+}
+.left_list1 h3{
+	margin-left:20px;
+}
+.left_list1 ul{
+	padding:0px;
+	margin:0px;
+}	
+.left_list1 ul li{
+	list-style:none;
+}
+.left_list1 ul li a{
+	width:178px;
+	display:inline-block;
+	padding-left:50px;
+	line-height:30px;
+	font-size:14px;
+	color:#666;
+	text-decoration:none;
+}
+.left_list1 ul li a:hover{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list1 #list1_H5{
+	font-weight:700;
+	color:#fff;
+	background:#aaa;
+	text-decoration:none;
+}
+.left_list2 h3{
+	margin-left:15px;
+}
+.left_list2 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list2 ul li{
+	list-style:none;
+}
+.left_list2 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	font-size:13px;
+	line-height:30px;
+	color:#777;
+	text-decoration:none;
+}
+.left_list2 ul li a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.left_list3 h3{
+	margin-left:15px;
+}
+.left_list3{
+	border-top:1px solid #eee;
+}
+.left_list3 ul{
+	margin:0px;
+	padding:0px;
+}
+.left_list3 ul li{
+	list-style:none;
+}
+.left_list3 ul li a{
+	width:213px;
+	display:inline-block;
+	padding-left:15px;
+	line-height:30px;
+	font-size:13px;
+	color:#000;
+	text-decoration:none;
+}
+.left_list3 ul li a:hover{
+	color:#fff;
+	background:#999;
+	text-decoration:none;
+}
+.left_list3 p{
+	font-weight:700;
+	text-align:center;
+	line-height:30px;
+	font-size:14px;
+	color:#0479A7;
+}
+.left_list3 p a{
+	color:#0479A7;
+	text-decoration:none;
+}
+.middle{
+	float:left;
+	padding-left:30px;
+	font-size:14px;
+	font-family:"microsoft yahei";
+	width:890px;
+	height:auto;
+}
+.title_idx p{
+	padding-left:0px;
+	line-height:25px;
+}
+.middle p span{
+	color:#00C;
+	font-weight:700;
+}
+.middle_title span a{
+	display:inline-block;
+	margin-right:25px;
+	height:30px;
+	width:100px;
+	text-align:center;
+	line-height:30px;
+	font-size:13px;
+	font-family:"microsoft yahei";
+	color:#444;
+	background:#eee;
+	border:1px solid #ddd;
+	text-decoration:none;
+}
+.middle_title span a:hover{
+	color:#fff;
+	background:#ae4141;
+	text-decoration:none;
+}
+.middle table{
+	width:890px;
+	border:1px solid #eee;
+}
+.middle table tr{
+	height:30px;
+	font-size:14px;
+	line-height:30px;
+	text-indent:1em;
+}
+.middle table a{
+	color:#ae4141;
+	text-decoration:underline;
+}
+.arg{
+	padding:20px;
+	width:840px;
+	background:#eee;
+	border:1px dotted #785;
+}
+.right{
+	float:right;
+	margin-left:30px;
+	width:198px;
+	height:2470px;
+	border:1px solid #eee;
+}
+.right_tools{
+	height:40px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	line-height:40px;
+	font-weight:700;
+	color:#aaa;
+}
+.tools_list{
+	width:175px;
+	height:auto;
+	margin:0 auto;
+}
+.right_tools p{
+	margin:0px;
+	padding:0px;
+}
+.tools_1{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	margin-top:20px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #093 , #063); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #093, #063); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #093, #063); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #093 , #063); /* 标准的语法 */
+}
+.tools_2{
+	margin: auto;
+	width:175px;
+	height:100px;
+	margin-bottom:20px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #3cc , #39c); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #3cc, #39c); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #3cc, #39c); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #3cc , #39c); /* 标准的语法 */
+}
+.tools_3{
+	margin:0 auto;
+	width:175px;
+	height:100px;
+	border-radius:5px;
+	background: -webkit-linear-gradient(top, #939 , #909); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom, #939, #909); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom, #939, #909); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom, #939, #909); /* 标准的语法 */
+}
+.right_link{
+	margin-top:20px;
+	text-align:center;
+}
+.right_link p{
+	margin:0px;
+	padding:0px;
+	width:198px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	font-weight:700;
+	background:#eee;
+}
+.line{
+	width:1380px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.footer{
+	margin:0 auto;
+	width:1380px;
+	height:60px;
+	line-height:60px;
+	font-size:14px;
+	text-align:center;
+	background:#eee;
+	color:#000;
+}
+.copyright{
+	margin:0 auto;
+	height:60px;
+	margin-top:20px;
+	text-align:center;
+	font-size:12px;
+	color:#999;
+}
+#scrollup{
+    position:fixed;
+    bottom:65px;
+    right:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    display: none;
+    font-size:40px;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    background: #777;
+    z-index:99;
+    opacity:0.8;
+}
+#scrollup:hover{
+    opacity:0.7;
+}
+.clearfix{
+	zoom:1;/*兼容IE*/
+}
+.clearfix:before{
+	display:inline-block;
+	content:"";
+	height:0px;
+	line-height:0px;
+	visibility:hidden;
+	clear:both;
+}
+</style>
+
+</head>
+
+<body>
+<div class="header">
+	<div class="title"><a href="../首页.html">玩转JavaScript</a></div>
+</div>
+<div class="nav">
+	<ul>
+		<li><a href="html标签.html" id="nav_H5">HTML5</a></li>
+		<li><a href="css3简介.html">CSS3</a></li>
+		<li><a href="JavaScript简介.html">JavaScript</a></li>
+		<li><a href="jquery简介.html">jQuery</a></li>
+		<li><a href="Web service.html">Web Services</a></li>
+		<li><a href="Web Building.html">Web Building</a></li>
+	</ul>
+</div>
+<div class="content clearfix">
+	<div class="left">
+		<div class="left_top">课程表</div>
+		<div class="left_list1">
+			<h3>参考手册</h3>
+			<ul>
+				<li><a href="html标签.html">HTML5标签</a></li>
+				<li><a href="html5属性.html">HTML5属性</a></li>
+				<li><a href="html5事件.html">HTML5事件</a></li>
+				<li><a href="html5表单.html">HTML5表单</a></li>
+				<li><a href="#" id="list1_H5">HTML5视频/音频</a></li>
+				<li><a href="html画布.html">HTML5画布</a></li>
+			</ul>
+		</div>
+		<div class="left_list2">
+			<h3>HTML5视频/音频</h3>
+			<ul>
+				<li><a href="#">Audio/Video 方法</a></li>
+				<li><a href="#">Audio/Video 属性</a></li>
+				<li><a href="#">Audio/Video 事件</a></li>
+			</ul>
+		</div>
+		<div class="left_list3">
+			<h3>建站手册</h3>
+			<ul>
+				<li><a href="#">网站构建</a></li>
+				<li><a href="#">万维网联盟(W3C)</a></li>
+				<li><a href="#">浏览器信息</a></li>
+				<li><a href="#">网站品质</a></li>
+				<li><a href="#">语义网</a></li>
+				<li><a href="#">网站主机</a></li>
+			</ul>
+			<p><a href="#">关于玩转JavaScript</a></p>
+			<p><a href="#">帮助JavaScript</a></p>
+		</div>
+	</div>
+	<div class="middle">
+		<div class="middle_title">
+			<h1>HTML 5 视频/音频参考手册</h1>
+			<span><a href="html5表单.html">&lt;上一节</a></span><span><a href="html画布.html">下一节&gt;</a></span><br><br>
+			<hr></hr>
+		</div>
+		<div class="middle_introduce">
+			<h3>HTML5 视频和音频的 DOM 参考手册</h3>
+			<p>HTML5 DOM 为&lt;audio&gt;和&lt;video&gt;元素提供了方法、属性和事件。</p>
+			<p>这些方法、属性和事件允许您使用 JavaScript 来操作&lt;audio&gt;和&lt;video&gt;元素</p>
+			<hr></hr>
+		</div>
+		 <h2>HTML5 Audio/Video 方法</h2>
+		<table id="tb_method">
+			<tr>
+				<th>方法</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">addTextTrack()</a></td><td>向音频/视频添加新的文本轨道</td>
+			</tr>
+			<tr>
+				<td><a href="#">canPlayType()</a></td><td>检测浏览器是否能播放指定的音频/视频类型</td>
+			</tr>
+			<tr>
+				<td><a href="#">load()</a></td><td>	重新加载音频/视频元素</td>
+			</tr>
+			<tr>
+				<td><a href="#">play()</a></td><td>开始播放音频/视频</td>
+			</tr>
+			<tr>
+				<td><a href="#">pause()</a></td><td>暂停当前播放的音频/视频</td>
+			</tr>
+		</table>
+		<br><br><hr></hr>
+		<h2>HTML5 Audio/Video 属性</h2>
+		<table id="tb_attr">
+			<tr>
+				<th>属性</th><th>描述</th>
+			</tr>
+			<tr>
+				<td><a href="#">audioTracks</a></td><td>返回表示可用音轨的 AudioTrackList 对象</td>
+			</tr>
+			<tr>
+				<td><a href="#">autoplay</a></td><td>设置或返回是否在加载完成后随即播放音频/视频</td>
+			</tr>
+			<tr>
+				<td><a href="#">buffered</a></td><td>返回表示音频/视频已缓冲部分的 TimeRanges 对象</td>
+			</tr>
+			<tr>
+				<td><a href="#">controller</a></td><td>返回表示音频/视频当前媒体控制器的 MediaController 对象</td>
+			</tr>
+			<tr>
+				<td>crossOrigin</td><td>设置或返回音频/视频的 CORS 设置</td>
+			</tr>
+			<tr>
+				<td><a href="#">currentSrc</a></td><td>返回当前音频/视频的 URL</td>
+			</tr>
+			<tr>
+				<td><a href="#">currentTime</a></td><td>设置或返回音频/视频中的当前播放位置（以秒计）</td>
+			</tr>
+			<tr>
+				<td><a href="#">defaultMuted</a></td><td>设置或返回音频/视频默认是否静音</td>
+			</tr>
+			<tr>
+				<td><a href="#">defaultPlaybackRate</a></td><td>设置或返回音频/视频的默认播放速度</td>
+			</tr>
+			<tr>
+				<td><a href="#">duration</a></td><td>返回当前音频/视频的长度（以秒计）</td>
+			</tr>
+			<tr>
+				<td><a href="#">ended</a></td><td>返回音频/视频的播放是否已结束</td>
+			</tr>
+			<tr>
+				<td><a href="#">error</a></td><td>返回表示音频/视频错误状态的 MediaError 对象</td>
+			</tr>
+			<tr>
+				<td><a href="#">loop</a></td><td>设置或返回音频/视频是否应在结束时重新播放</td>
+			</tr>
+			<tr>
+				<td><a href="#">mediaGroup</a></td><td>设置或返回音频/视频所属的组合（用于连接多个音频/视频元素）</td>
+			</tr>
+			<tr>
+				<td><a href="#">muted</a></td><td>设置或返回音频/视频是否静音</td>
+			</tr>
+			<tr>
+				<td><a href="#">networkState</a></td><td>返回音频/视频的当前网络状态</td>
+			</tr>
+			<tr>
+				<td><a href="#">paused</a></td><td>设置或返回音频/视频是否暂停</td>
+			</tr>
+			<tr>
+				<td><a href="#">playbackRate</a></td><td>设置或返回音频/视频播放的速度</td>
+			</tr>
+			<tr>
+				<td><a href="#">played</a></td><td>返回表示音频/视频已播放部分的 TimeRanges 对象</td>
+			</tr>
+			<tr>
+				<td><a href="#">preload</a></td><td>设置或返回音频/视频是否应该在页面加载后进行加载</td>
+			</tr>
+			<tr>
+				<td><a href="#">readyState</a></td><td>返回音频/视频当前的就绪状态</td>
+			</tr>
+			<tr>
+				<td><a href="#">seekable</a></td><td>返回表示音频/视频可寻址部分的 TimeRanges 对象</td>
+			</tr>
+			<tr>
+				<td><a href="#">seeking</a></td><td>返回用户是否正在音频/视频中进行查找</td>
+			</tr>
+			<tr>
+				<td><a href="#">src</a></td><td>设置或返回音频/视频元素的当前来源</td>
+			</tr>
+			<tr>
+				<td><a href="#">startDate</a></td><td>返回表示当前时间偏移的 Date 对象</td>
+			</tr>
+			<tr>
+				<td><a href="#">textTracks</a></td><td>返回表示可用文本轨道的 TextTrackList 对象</td>
+			</tr>
+			<tr>
+				<td><a href="#">videoTracks</a></td><td>返回表示可用视频轨道的 VideoTrackList 对象</td>
+			</tr>
+			<tr>
+				<td><a href="#">volume</a></td><td>设置或返回音频/视频的音量</td>
+			</tr>
+		</table>
+		<br><br><hr></hr>
+		<h2>HTML5 Audio/Video 事件</h2>
+		<table id="tb_event">
+			<tr>
+				<th>事件</th><th>描述</th>
+			</tr>
+			<tr>
+				<td>abort</td><td>当音频/视频的加载已放弃时</td>
+			</tr>
+			<tr>
+				<td><a href="#">canplay</a></td><td>当浏览器可以播放音频/视频时</td>
+			</tr>
+			<tr>
+				<td><a href="#">canplaythrough</a></td><td>当浏览器可在不因缓冲而停顿的情况下进行播放时</td>
+			</tr>
+			<tr>
+				<td><a href="#">durationchange</a></td><td>当音频/视频的时长已更改时</td>
+			</tr>
+			<tr>
+				<td>emptied</td><td>当目前的播放列表为空时</td>
+			</tr>
+			<tr>
+				<td>ended</td><td>当目前的播放列表已结束时</td>
+			</tr>
+			<tr>
+				<td>error</td><td>当在音频/视频加载期间发生错误时</td>
+			</tr>
+			<tr>
+				<td><a href="#">loadeddata</a></td><td>当浏览器已加载音频/视频的当前帧时</td>
+			</tr>
+			<tr>
+				<td><a href="#">loadedmetadata</a></td><td>当浏览器已加载音频/视频的元数据时</td>
+			</tr>
+			<tr>
+				<td><a href="#">loadstart</a></td><td>当浏览器开始查找音频/视频时</td>
+			</tr>
+			<tr>
+				<td>pause</td><td>当音频/视频已暂停时</td>
+			</tr>
+			<tr>
+				<td>play</td><td>当音频/视频已开始或不再暂停时</td>
+			</tr>
+			<tr>
+				<td>playing</td><td>当音频/视频在已因缓冲而暂停或停止后已就绪时</td>
+			</tr>
+			<tr>
+				<td><a href="#">progress</a></td><td>当浏览器正在下载音频/视频时</td>
+			</tr>
+			<tr>
+				<td>ratechange</td><td>当音频/视频的播放速度已更改时</td>
+			</tr>
+			<tr>
+				<td>seeked</td><td>当用户已移动/跳跃到音频/视频中的新位置时</td>
+			</tr>
+			<tr>
+				<td>seeking</td><td>当用户开始移动/跳跃到音频/视频中的新位置时</td>
+			</tr>
+			<tr>
+				<td>stalled</td><td>当浏览器尝试获取媒体数据，但数据不可用时</td>
+			</tr>
+			<tr>
+				<td>suspend</td><td>当浏览器刻意不获取媒体数据时</td>
+			</tr>
+			<tr>
+				<td>timeupdate</td><td>当目前的播放位置已更改时</td>
+			</tr>
+			<tr>
+				<td>volumechange</td><td>	当音量已更改时</td>
+			</tr>
+			<tr>
+				<td>waiting</td><td>当视频由于需要缓冲下一帧而停止</td>
+			</tr>
+		</table>
+	</div>
+	<div class="right">
+		<div class="right_tools"><p>工具箱</p></div>
+		<div class="tools_list">
+			<div class="tools_1"></div>
+			<div class="tools_2"></div>
+			<div class="tools_3"></div>
+		</div>
+		<div class="right_link">
+			<p>赞助商链接</p>
+			<div></div>
+		</div>
+	</div>
+</div>
+<div class="line"><hr></hr></div>
+<div class="footer">
+	<p>玩转JavaScript提供的内容仅供学习和参考，不保证内容的正确性。通过使用本网站随之而来的风险与本站无关。</p>
+</div>
+<div class="copyright">
+	<p>Copyright © 2016-2019 Play with javascript. All Rights Reserved.</p>
+	<p>玩转JavaScript 版权所有</p>
+</div>
+<a id="scrollup" href="#top"><span style="font-size:18px; line-height:50px;">顶</span></a>
+</body>
+</html>
